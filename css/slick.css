@@ -102,3 +102,44 @@
 .slick-arrow.slick-hidden {
 	display: none;
 }
+
+
+/* Slider More Series/ Episodes */
+.series-page .more-videos {
+	height: auto; }
+.series-page .more-videos .slick-slide {
+	height: auto;
+	padding: 0 15px;}
+.series-page .more-videos button.slick-arrow {
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	color: transparent;
+	height: 2.44em;
+	width: 2.44em;
+	background: #000000; }
+.series-page .more-videos button.slick-prev {
+	left: -90px;
+	z-index: 3;
+	top: 25%; }
+.series-page .more-videos button.slick-next {
+	right: -90px;
+	top: 25%; }
+.series-page .more-videos button.slick-next, .series-page .more-videos button.slick-prev {
+	position: absolute; }
+.series-page .more-videos button.slick-prev.slick-arrow:after {
+	content: "<";
+	color: #FFFFFF;
+	top: 0.7em;
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0; }
+.series-page .more-videos button.slick-next.slick-arrow:after {
+	content: ">";
+	color: #FFFFFF;
+	top: 0.7em;
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0; }

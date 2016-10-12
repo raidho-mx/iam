@@ -5,6 +5,13 @@ section
 	position: relative
 	float: left
 
+=padding-wrap
+	padding-left: 10%
+	padding-right: 10%
+	@media (max-width: $large_b)
+		padding-left: 5%
+		padding-right: 5%
+
 .wrap
 	margin: 0 auto
 	position: relative
@@ -18,6 +25,14 @@ section
 	max-width: 33.33em
 	position: relative
 	margin: 0 auto
+
+.full-wrap
+	+padding-wrap
+	float: left
+	width: 100%
+	> div
+		max-width: 1024px
+		margin: 0 auto
 
 =wrap
 	margin: 0 auto
@@ -48,12 +63,7 @@ section
 	@media (max-width: $phone_b)
 		padding-bottom: 1.67em
 
-=padding-wrap
-	padding-left: 10%
-	padding-right: 10%
-	@media (max-width: $large_b)
-		padding-left: 5%
-		padding-right: 5%
+
 
 .divider
 	display: inline-block
@@ -81,8 +91,9 @@ section
 		vertical-align: top
 		position: relative
 		@media (max-width: $tablet_b)
-			width: 100%
+			display: inline-block
 			margin: 0
+			width: 100%
 
 =two_col_table
 	> div
@@ -117,4 +128,12 @@ section
 	width: 33%
 	float: left
 	@media (max-width: $tablet_b)
+		width: 100%
+
+=one-fourth
+	width: 25%
+	float: left
+	@media (max-width: $tablet_b)
+		width: 50%
+	@media (max-width: $phone_b)
 		width: 100%

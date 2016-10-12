@@ -44,8 +44,11 @@ $(document).ready(function(){
 // Margin Top Body
 $(window).on('resize', function(){
 	var headerHeight = $("header").outerHeight();
-	$("body").css({"margin-top" : headerHeight });
+	var breadcrumbsHeight = $(".nd-nav").outerHeight();
+	var totalHeaderHeight = headerHeight + breadcrumbsHeight;
+	$("body").css({"margin-top" : totalHeaderHeight });
 	$(".manifiesto-slider-wrapper").css({"top" : headerHeight});
+	$(".manifiesto-slider-wrapper .up").css({ 'top' : headerHeight });
 });
 
 
@@ -123,7 +126,6 @@ $(window).scroll(function(){
 		$("#manifiesto2").css({ 'position' : 'fixed', 'z-index' : '3', 'top' : '0', 'width' : '100%' });
 	} else if ( scroll <= 999 ) {
 		//primer disparo
-		$("#three").css({ "margin-left" : "0" });
 		$("#mainQuote").css({ 'margin-top' : - m1 });
 		$("#mainQuote").css({ 'opacity' : '0' });
 		$("#manifiesto2").css({ 'margin-top' : '0' });
@@ -133,6 +135,7 @@ $(window).scroll(function(){
 		$("#manifiesto2").css({ 'margin-top' : -m1, 'position' : 'relative' });
 	}
 });
+
 
 // // SHOW RTL SLIDES
 // $(window).scroll(function(){
@@ -188,6 +191,28 @@ $(document).ready(function() {
 // Series: More Videos Carousell
 $('.more-videos').slick({
 	infinite: true,
-	slidesToShow: 3,
-	slidesToScroll: 3
+	slidesToShow: 4,
+	slidesToScroll: 2,
+	responsive: [
+	{
+	breakpoint: 1024,
+	settings: {
+			slidesToShow: 3,
+			slidesToScroll: 3
+		}
+	},
+	{
+	breakpoint: 600,
+	settings: {
+			slidesToShow: 2,
+			slidesToScroll: 2
+		}
+	},
+	{
+		breakpoint: 480,
+		settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1
+		}
+	}]
 });

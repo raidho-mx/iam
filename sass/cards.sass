@@ -131,7 +131,10 @@
 			bottom: 0
 		.image
 			position: inherit
-		.image, .img, .info-window, .info
+		.image,
+		.img,
+		.info-window,
+		.info
 			width: 100%
 			max-width: 100%
 		.info
@@ -169,6 +172,41 @@
 		float: left
 		height: 4.4em
 		width: 4.4em
+
+
+// single video card
+.single-video-card
+	display: inline-block
+	+one-fourth
+	.img
+		+bg-img
+		height: 8.33em
+		position: relative
+	.tag
+		padding: 0.55em
+		background: $c-black
+		color: $c-white
+		font-family: "avenirB", sans-serif
+		font-size: 0.77em
+		position: absolute
+		bottom: 0.55em
+		right: 0.55em
+	.blue-mask
+		border: 0.55em solid $c-blue
+	.blue-mask p
+		color: $c-white
+		font-family: "avenirB", sans-serif
+		text-align: center
+		margin-top: 25%
+		width: 100%
+	.txt p
+		font-size: 0.778em
+		line-height: 1.5em
+		color: $c-black
+	.txt strong
+		font-family: "avenirB", sans-serif
+		margin: 1.2em 0
+		display: block
 
 
 // post card + info window
