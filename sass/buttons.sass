@@ -1,0 +1,113 @@
+/* BUTTONS */
+
+.burger
+	width: 16px
+	float: left
+	margin-top: 3px
+	margin-right: 1.1em
+	> div
+		width: 100%
+		background: $c-white
+		height: 3px
+		margin-bottom: 3px
+	> div:last-child
+		margin-bottom: 0
+	@media (max-width: $tablet_b)
+		display: block
+
+
+// cta's styles
+.btn-bold-under-bgblue
+	background-color: $c-blue
+	color: $c-white
+	font-family: 'avenirB'
+	font-size: 14px
+	padding: 1em 1.11em
+	text-decoration: underline
+	text-align: center
+
+.btn-bold-under-bgblack
+	background-color: $c-black
+	color: $c-white
+	font-family: 'avenirB'
+	font-size: 14px
+	padding: 1em 1.11em
+	text-decoration: underline
+	text-align: center
+
+=social-media-small-bluebg
+	position: absolute
+	bottom: -15px
+	left: 0
+	background-color: $c-blue
+	color: $c-white
+	font-size: 1.33em
+	font-family: 'FontAwesome'
+	padding: 5px
+
+
+// social media
+.btn-follow
+	p, ul
+		display: inline-block
+	p
+		margin-right: 1.77em
+	li
+		font-family: 'FontAwesome'
+		display: inline-block
+		margin-right: 1.11em
+
+.btn-black-social-media
+	display: inline-block
+	a
+		color: $c-black
+	li
+		font-family: 'FontAwesome'
+		display: inline-block
+		margin-right: 1.11em
+
+// CTA's
+.cta-bluebg
+	background-color: $c-blue
+	color: $c-white
+	display: inline-block
+	padding: 1.13em 2em
+	b
+		font-family: 'avenirB'
+		text-decoration: underline
+
+
+// Breadcrumbs
+.breadcrumbs
+	ul
+		text-align: center
+	li
+		display: inline-block
+	a
+		font-size: 0.722em
+	a:active, a:visited
+		font-family: 'avenirB', sans-serif
+	a:after
+		content: '>'
+		margin: 0 5px
+	li:last-child a::after
+		content: ''
+		margin: 0
+
+// Links
+.back-to
+	display: block
+	font-family: 'avenirB', sans-serif
+	font-size: 1.33em
+	text-decoration: underline
+	position: relative
+	margin: 0 auto
+	margin-bottom: 1.4em
+	color: $c-black
+	&:after
+		content: '👈'
+		position: absolute
+		margin: 0 auto
+		left: 0
+		right: 0
+		top: 1.4em

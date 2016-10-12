@@ -1,0 +1,1 @@
+var infoUrl="http://iam-platform.herokuapp.com/api/v1/pages/";$.getJSON(infoUrl,function(i){var a=[];$.each(i,function(i,o){a.push("<li id='"+i+"'>"+o+"</li>")}),$("<ul/>",{"class":"my-new-list",html:a.join("")}).appendTo("body")});

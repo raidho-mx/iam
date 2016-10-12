@@ -1,0 +1,222 @@
+/* BUTTONS */
+
+.burger
+	width: 16px
+	float: left
+	margin-top: 3px
+	margin-right: 1.1em
+	> div
+		width: 100%
+		background: $c-white
+		height: 3px
+		margin-bottom: 3px
+	> div:last-child
+		margin-bottom: 0
+	@media (max-width: $tablet_b)
+		display: block
+
+/* only stroke buttons */
+.btn-blue__stroke
+	color: $c-blue
+	background-color: $c-white
+	+padding-small-button
+	border: 2px solid $c-blue
+
+.btn-black__stroke
+	color: $c-black
+	+padding-small-button
+	border: 2px solid $c-black
+
+.btn-white__stroke
+	color: $c-white
+	+padding-small-button
+	border: 2px solid $c-white
+
+.btn-black__stroke
+	color: $c-black
+	+padding-small-button
+	border: 2px solid $c-black
+
+.btn-white-input
+	color: $c-white
+	padding: 0.11px 2.22em
+	background: url('../img/link.svg') no-repeat 97% 5px
+	border: 2px solid $c-white
+	width: 100%
+	@include input-placeholder
+		color: $c-white
+
+.btn-yellow__stroke
+	color: $c-yellow
+	+padding-small-button
+	border: 2px solid $c-yellow
+
+/* stroke shadow effect buttons */
+.btn-blue__reg-stroke
+	color: $c-blue
+	background: $c-white
+	+padding-small-button
+	+border-blue-shadow
+
+.btn-blue__reg-stroke-ita
+	color: $c-blue
+	font-family: 'avenirBIta'
+	background: $c-white
+	+padding-small-button
+	+border-blue-shadow
+
+.btn-gray__reg-stroke-ita
+	color: $c-blue
+	font-family: 'avenirBIta'
+	background: $c-gray
+	+padding-small-button
+	+border-blue-shadow
+
+.btn-white__reg-stroke-ita
+	color: $c-white
+	border: 2px solid $c-white
+	font-family: 'avenirBIta'
+	+padding-small-button
+
+/* thick padding shadow effect buttons */
+.btn-blue__thick-stroke
+	color: $c-blue
+	background: $c-white
+	+padding-thick-button
+	+border-blue-shadow-thick
+
+.btn-white__thick-stroke
+	color: $c-white
+	+padding-thick-button
+	+border-white-shadow-thick
+
+.btn-gray__thick-stroke
+	color: $c-blue
+	background: $c-gray
+	+padding-thick-button
+	+border-blue-shadow-thick
+
+.btn-black__thick-stroke
+	color: $c-black
+	+padding-med-button
+	+border-black-shadow
+
+.btn-yellow__thick-stroke
+	color: $c-black
+	background: $c-yellow
+	+padding-med-button
+	+border-black-shadow
+
+.btn-blue__ita
+	color: $c-blue
+	background-color: $c-white
+	text-align: center
+	font-family: 'timesIta', Times New Roman
+	+padding-thick-button
+	border: 2px solid $c-blue
+	@include input-placeholder
+		color: $c-blue
+
+/* background color buttons */
+.btn-blue__fill
+	color: $c-white
+	+padding-small-button
+	background: $c-blue
+
+.btn-white__fill
+	color: $c-black
+	+padding-small-button
+	background: $c-white
+
+/* close buttons */
+.btn-close-txt
+	border: none
+	font-family: 'timesR', Times New Roman
+	color: $c-white
+	+align-top-right
+	z-index: 99
+	&:after
+		content: '✕'
+		font-size: 14px
+		font-family: "timesB", Times New Roman
+		color: $c-white
+		margin-left: 0.77em
+
+.btn-close
+	border: 1px solid $c-white
+	box-shadow: 2px 2px 0 0 $c-white
+	width: 22px
+	height: 22px
+	+align-top-left
+	&:after
+		content: '✕'
+		font-size: 12px
+		color: $c-white
+		left: 0
+		right: 0
+		position: absolute
+		top: 4px
+		text-align: center
+
+.btn-close.btn-close__blue
+	border: 1px solid $c-blue
+	box-shadow: 2px 2px 0 0 $c-blue
+	background: $c-white
+	&:after
+		color: $c-blue
+
+.btn-close.btn-close__black
+	border: 1px solid $c-black
+	box-shadow: 2px 2px 0 0 $c-black
+	&:after
+		color: $c-black
+
+.play-icon
+	position: absolute
+	left: 0
+	right: 0
+	margin: 0 auto
+	top: 45%
+	width: 36px
+	height: 36px
+	border-top: 20px solid transparent
+	border-left: 24px solid $c-white
+	border-bottom: 20px solid transparent
+
+.btn-pager
+	position: relative
+	li
+		display: inline-block
+		position: relative
+	li a
+		@extend .btn-blue__thick-stroke
+		width: 3.33em
+		margin-left: 10px
+		margin-right: 10px
+	li a:hover, li a:active
+		position: relative
+		top: 2px
+		background-color: $c-blue
+		color: $c-white
+		box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0)
+	li:nth-child(odd)
+		top: 5px
+	li:nth-child(even)
+		top: -5px
+
+.btn-follow
+	p, ul
+		display: inline-block
+	p
+		margin-right: 1.77em
+	li
+		font-family: 'FontAwesome'
+		display: inline-block
+		margin-right: 1.11em
+
+// CTAs W/TEXT
+.ct-blue-blured, a.ct-blue-blured
+	color: $c-blue
+	font-family: 'avenirB', helvetica
+	text-decoration: underline
+	text-shadow: 0px 4px 14px rgba(255, 237, 0, 0.8)

@@ -1,0 +1,500 @@
+// general
+.info-window
+	min-width: 11.11em
+	text-align: left
+	font-size: 18px
+	.bar
+		float: left
+		width: 100%
+		height: 11px
+		padding: 0px 4px
+		margin-bottom: 5px
+		position: relative
+		&:after
+			content: '• • •'
+			font-size: 10px
+			color: $c-white
+			position: absolute
+			top: 0
+	.txt
+		color: $c-blue
+		padding: 1em 1.11em
+		font-size: 0.77em
+		float: left
+		font-family: 'timesR', Times New Roman
+		+bg-white-blue-border
+		+generic-shadow
+		width: 100%
+		white-space: normal
+	.info
+		max-width: 11.11em
+	.info h2
+		font-family: 'timesB', Times New Roman
+		margin-bottom: 0.55em
+		font-size: 1em
+	.info p
+		font-family: 'timesR', Times New Roman
+
+// profile card + info window
+.profile-card
+	display: inline-block
+	.image
+		float: left
+		position: absolute
+	.img
+		+bg-img
+		display: block
+		height: 4.7em
+		width: 4.7em
+	.cta
+		+generic-shadow
+		display: inline-block
+	.info-window
+		position: relative
+		float: left
+		top: -19px
+	.info
+		margin-left: 4.4em
+	.txt p
+		+line-clamp-x2
+	@media (max-width: $phone_b)
+		max-width: 11.11em
+		.img
+			height: 8em
+			width: 100%
+		.info-window
+			left: 0
+			top: 0
+			width: 100%
+		.cta
+			width: 100%
+			margin-top: 1em
+		.info
+			margin-left: 0
+		.image
+			position: relative
+			width: 100%
+
+
+// project card + info window
+.project-card
+	display: inline-block
+	position: relative
+	margin-right: 2em
+	vertical-align: top
+	.image
+		bottom: 19px
+		float: left
+		+generic-shadow
+		position: absolute
+	.img
+		+bg-img
+		width: 15.5em
+		height: 8.8em
+	.cta
+		+generic-shadow
+		display: inline-block
+		position: relative
+		bottom: 19px
+	.info-window
+		float: left
+		bottom: 0
+		position: relative
+		top: 2em
+	.info
+		display: inline-block
+		margin-left: -0.3em
+		z-index: 2
+		position: relative
+	.info ul
+		display: inline-block
+	.info li
+		float: left
+		position: relative
+		margin-right: 2em
+	.info li:after
+		content: '+'
+		color: $c-blue
+		margin: 0 0.6em
+		position: absolute
+		top: 30%
+	.info li:last-child
+		margin-right: 0
+	.info li:last-child:after
+		content: ''
+	.info li img
+		max-height: 3.3em
+	@media (max-width: $phone_b)
+		max-width: 11.11em
+		margin-right: 0
+		.image, .cta
+			bottom: 0
+		.image
+			position: inherit
+		.image, .img, .info-window, .info
+			width: 100%
+			max-width: 100%
+		.info
+			margin-top: 1em
+			margin-left: 0
+		.info-window
+			top: 0
+		.cta
+			+generic-shadow
+			width: 100%
+
+
+// video card + info window
+.video-card
+	display: inline-block
+	position: relative
+	margin-left: 2em
+	.image
+		display: block
+	.img
+		+bg-img
+		width: 21.1em
+		height: 12.2em
+		max-width: 100%
+	.cta
+		+generic-shadow
+		float: right
+	.info-window
+		display: block
+		position: absolute
+		bottom: -4em
+		left: -1.9em
+	.host
+		+bg-img
+		float: left
+		height: 4.4em
+		width: 4.4em
+
+
+// post card + info window
+.post-card
+	display: inline-block
+	position: relative
+	margin-left: 2em
+	.image
+		display: block
+	.img
+		+bg-img
+		width: 21.1em
+		height: 12.2em
+		max-width: 100%
+	.cta
+		+generic-shadow
+		float: right
+	.info-window
+		display: block
+		margin-top: -19px
+		position: absolute
+		top: 0
+		right: -4em
+	.host
+		+bg-img
+		float: left
+		height: 4.4em
+		width: 4.4em
+
+
+// source card
+.source-card
+	display: inline-block
+	position: relative
+	margin-right: 2em
+	vertical-align: top
+	.image
+		bottom: 19px
+		float: left
+		+generic-shadow
+		position: absolute
+	.img
+		+bg-img
+		width: 15.5em
+		height: 8.8em
+		max-width: 100%
+	.cta
+		+generic-shadow
+		display: inline-block
+		position: relative
+		bottom: 19px
+	.info-window
+		bottom: 0
+		position: relative
+		top: 2em
+	.info
+		display: inline-block
+		margin-left: -0.3em
+		max-width: 12.22em
+		z-index: 2
+		top: 1.4em
+		position: relative
+	@media (max-width: $phone_b)
+		max-width: 11.11em
+		margin-right: 0
+		.image, .cta
+			bottom: 0
+		.image
+			position: inherit
+		.image, .img, .info-window, .info
+			width: 100%
+			max-width: 100%
+		.info
+			margin-top: 1em
+			margin-left: 0
+			top: 0
+		.info-window
+			top: 0
+		.cta
+			+generic-shadow
+			width: 100%
+
+
+// newsletter box
+.newsletter-box
+	max-width: 22.22em
+	display: inline-block
+	input[type="text"]
+		border: 5px solid $c-black
+		background: $c-white
+		display: inline-block
+		font-family: 'timesR', Times New Roman
+		margin-right: 1.11em
+		padding: 1.1em 1.2em
+		width: 100%
+		@include input-placeholder
+			color: $c-black
+	input[type="submit"]
+		background: $c-blue
+		color: $c-white
+		display: inline-block
+		text-decoration: underline
+		padding: 0.7em 1.5em
+		margin-top: 10px
+
+// newsletter box v2
+.newsletter-box2
+	max-width: 22.22em
+	display: inline-block
+	input[type="text"]
+		+generic-shadow
+		border: 5px solid $c-blue
+		background: $c-white
+		display: inline-block
+		font-family: 'timesR', Times New Roman
+		margin-right: 1.11em
+		padding: 1.1em 1.2em
+		width: 100%
+		@include input-placeholder
+			color: $c-black
+			opacity: 0.4
+	input[type="submit"]
+		+generic-shadow
+		font-size: 0.72em
+		text-decoration: underline
+		background: $c-blue
+		color: $c-white
+		box-shadow: 4px 4px 0px 0px $c-blue
+		padding: 0.7em 1.5em
+		border: 2px solid $c-white
+		float: left
+		margin-top: 1.2em
+		position: relative
+	input[type="submit"]:active
+		box-shadow: 2px 2px 0px 0px $c-blue
+		// border-top: 4px solid $c-gray-dark
+		// border-left: 4px solid #cacaca
+		// border-right: 0px solid $c-gray-dark
+		// border-bottom: 0px solid $c-gray-dark
+		left: 2px
+		top: 2px
+		position: relative
+	.bar
+		float: left
+		width: 100%
+		height: 11px
+		padding: 0px 4px
+		margin-bottom: 5px
+		position: relative
+		&:after
+			content: '• • •'
+			font-size: 10px
+			color: $c-white
+			position: absolute
+			top: 0
+
+
+// instagram box
+.instagram-box
+	display: inline-block
+	position: relative
+	.image img
+		max-width: 11.1em
+	.icon
+		+social-media-small-bluebg
+		bottom: -10px
+
+
+// medium box
+.medium-box
+	display: inline-block
+	position: relative
+	max-width: 12.22em
+	a
+		display: inline-block
+	.txt
+		padding-bottom: 1.11em
+	.icon
+		+social-media-small-bluebg
+
+
+// twitter box
+.twitter-box
+	display: inline-block
+	position: relative
+	max-width: 12.22em
+	a
+		display: inline-block
+	.txt
+		padding-bottom: 1.11em
+	.icon
+		+social-media-small-bluebg
+	.info-window
+		position: relative
+	.image
+		position: absolute
+		bottom: 40%
+		left: 20%
+	.image img
+		max-width: 17.22em
+
+
+// buy tickets cards x4
+.blue-card
+	display: inline-block
+	max-width: 14.44em
+	.txt
+		padding-bottom: 2.11em
+	.cta
+		+generic-shadow
+		float: left
+		margin-top: -1.3em
+	h2
+		font-size: 1.71em
+		font-family: "avenirR", sans-serif
+		margin-bottom: 0.2em
+	p
+		font-size: 1.4em
+
+.white-x2-stroke-card
+	display: inline-block
+	max-width: 14.44em
+	.info-window
+		max-width: 22.2em
+	.txt
+		padding-bottom: 2.11em
+		position: relative
+		box-shadow: none
+		border: 3px solid $c-blue
+		&:after
+			content: " "
+			position: absolute
+			z-index: -1
+			top: 4px
+			left: 4px
+			right: -9px
+			bottom: -9px
+			border-right: 3px solid $c-blue
+			border-bottom: 3px solid $c-blue
+	.cta
+		background: $c-white
+		color: $c-blue
+		float: left
+		margin-top: 1.2em
+		position: relative
+		&:after
+			content: " "
+			position: absolute
+			z-index: 0
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border: 4px solid $c-blue
+	h2
+		font-size: 1.71em
+		font-family: "avenirR", sans-serif
+		margin-bottom: 0.2em
+	p
+		font-size: 1.4em
+
+.blue-x2-stroke-card
+	display: inline-block
+	max-width: 14.44em
+	.info-window
+		max-width: 22.2em
+	.txt
+		padding-bottom: 2.11em
+		box-shadow: none
+		border: 3px solid $c-blue
+	.cta
+		box-shadow: 2px 2px 0px 0px rgba(1, 1, 255, 1)
+		float: left
+		margin-top: 1em
+		position: relative
+		&:after
+			content: " "
+			position: absolute
+			z-index: 0
+			top: 4px
+			left: 4px
+			right: 4px
+			bottom: 4px
+			border: 1px solid $c-white
+	h2
+		font-size: 1.71em
+		font-family: "avenirR", sans-serif
+		margin-bottom: 0.2em
+	p
+		font-size: 1.4em
+
+.yellow-card
+	display: inline-block
+	max-width: 14.44em
+	.info-window .txt
+		background-color: $c-yellow
+		color: $c-black
+		border: 1px solid $c-black
+		padding-bottom: 2.11em
+	.info-window
+		max-width: 22.2em
+	.cta
+		+generic-shadow
+		float: left
+		margin-top: -1.3em
+	h2
+		font-size: 1.71em
+		font-family: "avenirR", sans-serif
+		margin-bottom: 0.2em
+	p
+		font-size: 1.4em
+
+// menu cards
+
+.menu-card
+	color: $c-white
+	.img
+		+bg-img
+		+generic-shadow
+		margin-bottom: 1.11em
+		padding-bottom: 50%
+		width: 100%
+		max-width: 14.44em
+	.info h3
+		text-decoration: underline
+		font-family: 'timesR', Times New Roman
+	.info strong
+		font-family: "avenirB", sans-serif
+		font-size: 0.778em

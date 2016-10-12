@@ -1,0 +1,87 @@
+/* ELEMENTS */
+
+.flipped-txt
+	+transform(rotate(-90deg))
+	font-family: "avenirB", sans-serif
+	color: $c-blue
+	font-size: 2em
+	top: 45%
+	left: -9em
+	position: absolute
+
+
+// Include Blocks
+.random-stuff-block
+	margin: 5.56em 0
+	width: 100%
+	float: left
+	p
+		font-size: 1.33em
+		font-family: "avenirB", sans-serif
+		text-align: center
+		margin-bottom: 2.66em
+	.wrap
+		text-align: center
+
+
+.contact-block
+	background-repeat: repeat
+	padding: 2.77em 0
+	float: left
+	width: 100%
+	.wrap
+		text-align: center
+	.img
+		display: inline-block
+		max-width: 25.5em
+		margin-right: 1.66em
+		width: 100%
+	figure
+		position: relative
+		width: 100%
+	figure img
+		width: 100%
+	figcaption
+		color: $c-white
+		font-family: 'timesB', Times New Roman
+		font-size: 2.66em
+		+center-absolute
+		top: 40%
+	.form
+		max-width: 23.33em
+		display: inline-block
+		vertical-align: top
+	.form .info
+		background: $c-blue
+		text-align: left
+		padding: 1.33em
+		color: $c-white
+		margin-bottom: 0.556em
+	.form h3
+		font-family: "avenirB", sans-serif
+		font-size: 1.33em
+	form input
+		border: 2px solid $c-blue
+		background: $c-white
+		padding: 1.1em 1.2em
+	form input:nth-child(-n+2)
+		width: 49%
+		display: inline-block
+		font-family: 'timesR', Times New Roman
+		margin-bottom: 0.556em
+	form input:nth-child(3)
+		width: 100%
+		font-family: 'timesR', Times New Roman
+		display: inline-block
+	form input[type="submit"]
+		font-size: 0.72em
+		+generic-shadow
+		text-decoration: underline
+		background: $c-blue
+		color: $c-white
+		box-shadow: 4px 4px 0px 0px $c-blue
+		padding: 0.7em 1.5em
+		border: 2px solid $c-white
+		float: left
+		margin-top: 1.2em
+		position: relative

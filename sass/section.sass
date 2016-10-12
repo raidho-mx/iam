@@ -1,0 +1,620 @@
+/* SECTION */
+
+.kidnapped
+	.expanded-nav .wrap
+		overflow-y: scroll
+
+.full-header
+	padding: 1.667em
+
+.framed-header
+	margin: 1.667em
+
+header
+	background: $c-white
+	color: $c-black
+	+padding-wrap
+	float: left
+	a
+		color: $c-black
+	li
+		display: inline-block
+	.menu
+		width: 5.5em
+		position: absolute
+		left: 0
+		right: 0
+		margin: 0 auto
+	.menu a
+		display: block
+		margin: 0 auto
+		font-size: 1.33em
+		color: $c-blue
+		text-align: center
+	.menu p
+		display: inline-block
+		font-family: 'avenirB', sans-serif
+	.pages
+		float: left
+	.pages .iam
+		font-size: 1.33em
+	.pages li
+		padding-right: 1.667em
+		&:last-child
+			padding-right: 0
+	.media
+		float: right
+
+footer
+	background: $c-white
+	float: left
+	width: 100%
+	+ptb-100
+	b
+		font-family: 'avenirB', sans-serif
+	.wrap
+		+three_col
+		+padding-wrap
+		font-size: 0
+		width: 100%
+	.wrap > div
+		display: inline-block
+		vertical-align: bottom
+		font-size: 18px
+	.sitemap li
+		display: inline-block
+	.sitemap a
+		color: $c-black
+		font-family: 'timesR', Times New Roman
+		text-decoration: underline
+		position: relative
+		margin-right: 10px
+		&:after
+			content: '/'
+			position: absolute
+			margin: 0 5px
+			text-align: none
+	.sitemap li:last-child a:after
+		content: ''
+	.dont-push, .info-card
+		display: inline-block
+		vertical-align: top
+	.dont-push
+		width: 25%
+	.dont-push p
+		color: $c-blue
+		font-family: 'decimaR', monospace
+		font-size: 0.77em
+		margin-bottom: 1.11em
+		text-align: center
+	.dont-push .blue-arrow
+		margin: 0 auto
+		display: block
+		text-align: center
+		margin-bottom: 1.11em
+	.dont-push button
+		display: block
+		margin: 0 auto
+	.info-card
+		width: 70%
+		padding-left: 1em
+	.btn-black-social-media
+		margin-bottom: 2.77em
+	.sitemap-pages
+		margin-bottom: 2.22em
+	.sitemap-pages li
+		display: inline-block
+		margin-right: 1.11em
+	.sitemap-pages a
+		color: $c-black
+	.sitemap-pages strong
+		font-family: 'avenirB', sans-serif
+		text-decoration: underline
+	@media (max-width: $tablet_b)
+		.dont-push, .info-card
+			width: 100%
+		.info-card
+			padding-left: 0
+			padding-top: 1em
+		.sitemap-pages, .btn-black-social-media
+			margin-bottom: 1em
+		.sitemap-pages, .sitemap
+			width: 49%
+			display: inline-block
+			vertical-align: top
+	@media (max-width: $phone_b)
+		.sitemap-pages, .sitemap
+			width: 100%
+
+
+
+// BIG NAVIGATION
+.expanded-nav
+	color: $c-black
+	+transition(all ease 0.7s)
+	position: fixed
+	z-index: 0
+	.btn-close-txt
+		+align-top-right
+		border: none
+		z-index: 3
+	.bg-white
+		+transition(all ease 0.3s)
+		opacity: 0
+		height: 100vh
+		width: 100%
+	.wrap
+		position: relative
+		height: 100%
+	a
+		color: $c-black
+	.heading, .content
+		width: 100%
+		float: left
+	.heading
+		padding: 2.778em 0
+	.heading .iam
+		color: $c-blue
+		font-size: 4em
+	.menu-content
+		+one-third
+		padding-right: 2.77em
+	.menu-content strong
+		font-family: 'avenirB', sans-serif
+	.menu-content p
+		margin-bottom: 1.11em
+		line-height: 1.5em
+	.menu-content ul
+		margin-bottom: 1.7em
+	.menu-content li
+		display: inline-block
+	.menu-content li:last-child a:after
+		content: ''
+	.menu-content li a
+		font-family: 'timesR', Times New Roman
+		text-decoration: underline
+		position: relative
+		margin-right: 10px
+		&:after
+			content: '/'
+			position: absolute
+			margin: 0 5px
+			text-align: none
+	.featured-content
+		+two-thirds
+		@media (max-width: $tablet_b)
+			display: none
+	.featured-content > div
+		+one-third
+		padding-right: 2.77em
+	.featured-content h2
+		font-size: 1.33em
+		margin-bottom: 2.22em
+	.featured-content h2 strong
+		font-family: 'avenirB', sans-serif
+		text-decoration: underline
+	.featured-content h2 p
+		font-family: 'timesR', Times New Roman
+		text-decoration: underline
+		font-size: 18px
+		display: block
+	.featured-content div ul li
+		margin-bottom: 2.22em
+	.see-more
+		bottom: 30px
+		float: left
+		position: absolute
+		width: 100%
+	.sitemap, .btn-follow
+		display: inline-block
+		text-align: center
+		width: 100%
+	.sitemap
+		margin-bottom: 1.11em
+	.sitemap li
+		font-size: 0.778em
+		font-family: 'timesR', Times New Roman
+		display: inline-block
+	.sitemap li a:after
+		content: '\00a0—\00a0'
+	.sitemap li:last-child a:after
+		content: ''
+	@media (max-width: $tablet_b)
+		.see-more
+			margin-top: 1.33em
+			position: relative
+			bottom: 0
+		.sitemap, .btn-follow
+			text-align: left
+
+header
+	position: fixed
+	top: 0
+	z-index: 5
+
+header.opened
+	position: relative
+
+.expanded-nav.opened
+	margin-top: 0!important
+	position: fixed
+	+transition(all ease 0.7s)
+	top: 0
+	z-index: 8
+	.bg-white
+		+transition(all ease 0.4s)
+		opacity: 1
+		overflow-y: auto
+
+body.noScroll
+	overflow: hidden
+
+//SECONDARY NAV
+.nd-nav
+	+transition-duration( 1.2s )
+	background: $c-white
+	position: fixed
+	z-index: 4
+	top: 88px
+	width: 100%
+	.breadcrumbs
+		padding: 1.11em 0
+		a
+			color: $c-blue
+		a:active
+			text-decoration: underline
+	.down, .up
+		margin: 0 auto
+		display: block
+	.down
+		margin: 0 auto
+		width: 2em
+		text-align: center
+
+
+// MOVE THIS NEW CARDS
+.right-img-card
+	display: table
+	color: $c-white
+	.img
+		+bg-img
+		+generic-shadow
+		padding-bottom: 4.44em
+		width: 4.44em
+	.info
+		display: table-cell
+		padding-left: 1.11em
+		vertical-align: top
+		width: auto
+	.info h3
+		font-size: 1.11em
+		font-family: 'timesR', Times New Roman
+	.info small
+		display: block
+		font-size: 0.778em
+		font-family: 'avenirB', sans-serif
+
+.multiple-img-card
+	.img
+		margin-bottom: 1.11em
+	.img img
+		+generic-shadow
+		max-height: 4.4em
+	.img li
+		margin-bottom: 0!important
+	.img li:nth-child(1)
+		margin-left: 1.11em
+	.img li:nth-child(2)
+		margin-top: -15%
+	.info h3
+		font-size: 1.11em
+		margin-bottom: 1em
+		font-family: 'timesR', Times New Roman
+	.info h3 small
+		display: block
+		font-family: 'avenirB', sans-serif
+		font-size: 0.778em
+	.info p
+		font-size: 0.778em
+
+.ltr-scroll
+	.wrap
+		display: table
+		height: 100%
+	.parent-container
+		width: auto
+		height: 100vh
+		overflow-x: scroll
+		overflow-y: hidden
+		white-space: nowrap
+	.message
+		+table-cell
+		color: $c-blue
+		font-family: 'timesB', Times New Roman
+		font-size: 16em
+		padding: 0 5%
+	.listed-elements
+		position: absolute
+		left: 0
+		width: 100%
+		height: 100%
+		display: table
+	.listed-elements ul#childElements
+		+table-cell
+		width: 100%
+		height: 100%
+		padding: 0 20em
+	.listed-elements #childElements > li
+		+transition(all ease 0.6s)
+		opacity: 0
+		display: inline-block
+		vertical-align: middle
+		position: relative
+	.listed-elements #childElements > li:nth-child(even)
+		margin-top: -50px
+	.listed-elements #childElements > li:nth-child(odd)
+		margin-top: 50px
+
+
+// Manifiesto page
+.manifiesto-intro
+	+transition-duration(0.9s)
+	height: 91vh
+	width: 100%
+	background-color: $c-white
+	.main-quote
+		display: table
+		height: 80%
+		width: 100%
+		position: fixed
+		+transition-duration( 1.2s )
+	.main-quote .center
+		+table-cell
+		text-align: center
+		font-size: 4em
+		font-family: 'timesB', Times New Roman
+	.main-quote .center h1
+		margin: 0 auto
+		max-width: 550px
+		display: block
+
+
+.manifiesto-slick-nd-nav
+	ul
+		text-align: center
+	li
+		display: inline-block
+		position: relative
+	li a
+		font-family: 'timesR', Times New Roman
+		text-decoration: underline
+		color: $c-black
+		margin: 0 10px
+	li a:hover, li a:active
+		color: $c-blue
+	li a:after
+		content: '|'
+		color: $c-black
+		position: absolute
+		margin-left: 8px
+	li:last-child a:after
+		content: ''
+	li a.active
+		font-family: 'avenirB', sans-serif
+		color: $c-blue
+
+.manifiesto-foot
+	background: $c-white
+	+transition-duration(0.9s)
+	+pt-100
+	h1
+		font-family: 'timesB', Times New Roman
+		margin-bottom: 2.22em
+		text-align: center
+	.txt
+		font-size: 1.33em
+		padding-bottom: 5em
+	ol
+		list-style-type: decimal
+		+pb-100
+		margin-left: 2.8em
+	ol li
+		font-family: 'avenirB', sans-serif
+		font-size: 1.33em
+		padding-left: 2.4em
+		margin-bottom: 1.33em
+	.info
+		text-align: center
+	.info h2
+		font-size: 4em
+		margin-bottom: 0.56em
+	.info h2 span
+		color: $c-blue
+	.info p
+		font-family: 'timesR', Times New Roman
+		font-size: 1.33em
+		margin-bottom: 2.22em
+	.info a
+		font-size: 18px
+		color: $c-black
+		margin-top: 1.1em
+		display: block
+	.info a span
+		color: $c-blue
+		text-decoration: underline
+	@media (max-width: $tablet_b)
+		ol
+			margin-left: 1em
+		ol li
+			padding-left: 1em
+
+.manifiesto-slider-wrapper
+	position: relative
+	+transition-duration(0.9s)
+	.manifiesto-slides
+		position: absolute
+		top: 0
+		width: 100%
+		z-index: 3
+	.manifiesto-slider
+		.sliderM
+			display: table
+			height: 100%
+			width: 100%
+			position: relative
+		.sliderM .txt
+			+table-cell
+			height: 100vh
+		.sliderM .txt > div
+			max-width: 33em
+			margin: 0 auto
+		.sliderM .txt p
+			font-size: 2em
+			font-family: 'timesR', Times New Roman
+			position: relative
+		.sliderM .txt strong
+			font-family: 'timesB', Times New Roman
+		.sliderM .txt span
+			font-family: 'timesB', Times New Roman
+			position: absolute
+			left: -1.5em
+		@media (max-width: $tablet_b)
+			.sliderM .txt > div
+				padding: 0 10%
+			.sliderM .txt p
+				font-size: 1em
+	.up
+		position: absolute
+		bottom: 30px
+		margin: 0 auto
+		left: 0
+		right: 0
+		width: 2em
+		text-align: center
+
+.positionTop
+	position: fixed
+	z-index: 4
+	+transition-duration(0.8s)
+
+.positionTopManifiestoFoot
+	position: absolute
+	z-index: 4
+	+transition-duration(0.8s)
+
+#manifiesto2
+	+transition-duration(1.2s)
+
+
+ul.manifiesto-slide-dots
+	position: absolute
+	bottom: 80px
+	width: 100%
+	text-align: center
+	li
+		display: inline-block
+	li button
+		border: none
+		color: rgba(0,0,0,0)
+		display: inline-block
+		height: 3px
+		padding: 0
+		width: 1.667em
+		background-color: #EFEEED
+		margin-right: 10px
+	li.slick-active button
+		background-color: #9B9B9B
+
+
+// Profile Page
+.single-profile
+	.profile-img
+		position: relative
+		margin-bottom: 5.56em
+	.profile-img .name
+		position: absolute
+		top: -20%
+		left: -50%
+	.profile-description
+		margin-bottom: 5.56em
+	figure
+		margin-top: 30%
+	figure img
+		width: 100%
+		border: 0.83em solid $c-blue
+	figcaption
+		padding: 0 3em
+		margin-top: 2.2em
+		text-align: center
+		color: $c-blue
+	figcaption h3.timesR
+		margin-top: 0.3em
+	.btn-follow ul
+		text-align: center
+		margin-top: 1em
+		width: 100%
+	.btn-follow a
+		color: $c-black
+		font-size: 1.3em
+	iframe
+		border: 0.6em solid $c-blue
+		margin: 1.667em 0
+
+
+// Series & Episodes
+.series-page
+	.filter-menu
+		width: 100%
+		float: left
+		clear: both
+	ul li
+		text-align: center
+		padding: 3.3em 0
+		width: 50%
+		float: left
+	ul li.current
+		position: relative
+		background-color: #fff
+		border-bottom: 1px solid #fff
+		z-index: 5
+	ul li a
+		color: $c-black
+	ul .current a
+		color: $c-blue
+		text-decoration: underline
+	.container
+		background-color: $c-white
+		float: left
+		margin-bottom: 20px
+		width: 100%
+	.tab-content
+		padding: 20px 0
+		display: none
+	#tab-1
+		display: block
+	.more-videos
+		height: auto
+	.more-videos .slick-slide
+		height: auto
+	.more-videos button.slick-arrow
+		+border-radius(100px)
+		color: rgba(0,0,0,0)
+		height: 2.44em
+		width: 2.44em
+		background: $c-black
+	.more-videos button.slick-prev
+		left: 0
+	.more-videos button.slick-next
+		right: 0
+	.more-videos button.slick-next, .more-videos button.slick-prev
+		position: absolute
+	.more-videos button.slick-prev.slick-arrow:after
+		content: '<'
+		color: $c-white
+		top: 0.7em
+		+center-absolute
+	.more-videos button.slick-next.slick-arrow:after
+		content: '>'
+		color: $c-white
+		top: 0.7em
+		+center-absolute

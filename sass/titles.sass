@@ -1,0 +1,77 @@
+.wrapper
+	position: relative
+
+// WHITE BOX W/BLUE BORDER
+.small-caption-white
+	font-size: 18px
+	border: 2px solid $c-blue
+	background-color: $c-white
+	z-index: 1
+	padding: 0.55em
+	color: $c-blue
+	position: absolute
+	width: 12.77em
+	strong
+		color: $c-blue
+		display: block
+		font-family: 'avenirB'
+		font-size: 18px
+		margin-bottom: 20px
+	p
+		font-family: 'timesR'
+		font-size: 14px
+
+// BLUE BOX W/WHITE BORDER
+.small-caption-blue
+	background-color: $c-blue
+	color: $c-white
+	border: 2px solid $c-white
+	padding: 1.38em
+	width: 16.6em
+	position: absolute
+	h1
+		font-size: 1.11em
+		font-family: 'avenirB', arial
+		line-height: 1.5em
+	p
+		font-family: 'avenirR', arial
+		font-size: 0.77em
+		text-decoration: underline
+
+// GRAY SMALL BOX
+.small-caption-gray
+	background-color: $c-gray
+	padding: 1.38em
+	width: 24.16em
+	p span
+		font-family: 'avenirR', arial
+	h2
+		color: $c-blue
+		font-family: 'timesB', times
+		font-size: 1.33em
+		text-decoration: underline
+		margin: 0.7em 0
+	ul li
+		padding-right: 10px
+		display: inline-block
+	ul li, ul li a
+		color: $c-blue
+		font-family: 'avenirR', arial
+		text-decoration: none
+	ul li:before
+		content: '|'
+		color: $c-blue
+		position: absolute
+		margin-left: -10px
+		margin-top: -1px
+	ul li:nth-child(1):before
+		content: ''
+
+// QUOTATION
+.no-marks-quote
+	font-size: 2em
+	font-family: 'timesR', Times New Roman
+	blockquote:before
+		content: ''
+	blockquote:after
+		content: ''

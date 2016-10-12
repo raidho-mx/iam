@@ -1,0 +1,120 @@
+/*GRID*/
+
+section
+	width: 100%
+	position: relative
+	float: left
+
+.wrap
+	margin: 0 auto
+	position: relative
+	width: 90%
+	@media (min-width: $large_b)
+		width: 80%
+	@media (max-width: $tablet_b)
+		width: 90%
+
+.small-wrap
+	max-width: 33.33em
+	position: relative
+	margin: 0 auto
+
+=wrap
+	margin: 0 auto
+	width: 90%
+	@media (min-width: $large_b)
+		width: 80%
+	@media (max-width: $tablet_b)
+		width: 90%
+
+=pt-100
+	padding-top: 6.11em
+	@media (max-width: $tablet_b)
+		padding-top: 2.77em
+	@media (max-width: $phone_b)
+		padding-top: 1.67em
+
+=ptb-100
+	padding: 6.11em 0
+	@media (max-width: $tablet_b)
+		padding: 2.77em 0
+	@media (max-width: $phone_b)
+		padding: 1.67em 0
+
+=pb-100
+	padding-bottom: 6.11em
+	@media (max-width: $tablet_b)
+		padding-bottom: 2.77em
+	@media (max-width: $phone_b)
+		padding-bottom: 1.67em
+
+=padding-wrap
+	padding-left: 10%
+	padding-right: 10%
+	@media (max-width: $large_b)
+		padding-left: 5%
+		padding-right: 5%
+
+.divider
+	display: inline-block
+	margin: 150px auto 0 auto
+	width: 100%
+
+.divider-auto
+	display: inline-block
+	margin-right: 50px
+	width: auto
+	vertical-align: top
+
+// GRID
+.one-col
+	max-width: 36.77em
+	margin: 0 auto
+	@media (max-width: $tablet_b)
+		max-width: 100%
+
+=two_col
+	float: left
+	> div, > li, > figure
+		width: 49%
+		display: inline-block
+		vertical-align: top
+		position: relative
+		@media (max-width: $tablet_b)
+			width: 100%
+			margin: 0
+
+=two_col_table
+	> div
+		display: table-cell
+		width: 50%
+	> div:nth-child(2)
+		padding-right: 4.44em
+	@media (max-width: $phone_b)
+		> div
+			display: inline-block
+			width: 100%
+		> div:nth-child(2)
+			padding-right: 0
+
+=three_col
+	float: left
+	> div, > li, > figure
+		width: 33.33%
+		position: relative
+		@media (max-width: $tablet_b)
+			width: 100%
+			margin: 0
+			margin-bottom: 1.11em
+
+=two-thirds
+	width: 66%
+	float: left
+	@media (max-width: $tablet_b)
+		width: 100%
+
+=one-third
+	width: 33%
+	float: left
+	@media (max-width: $tablet_b)
+		width: 100%
