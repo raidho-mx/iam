@@ -1185,24 +1185,20 @@ footer {
     display: inline-block;
     vertical-align: top; }
   footer .dont-push {
-    width: 25%; }
-  footer .dont-push p {
-    color: #0000FF;
-    font-family: "decimaR", monospace;
-    font-size: 0.77em;
-    margin-bottom: 1.11em;
+    width: 25%;
     text-align: center; }
-  footer .dont-push .blue-arrow {
-    margin: 0 auto;
+  footer .dont-push .tdfw-btn {
     display: block;
-    text-align: center;
-    margin-bottom: 1.11em; }
-  footer .dont-push button {
-    display: block;
-    margin: 0 auto; }
+    margin-top: 1.1em;
+    margin-left: 0.5em; }
   footer .info-card {
     width: 70%;
     padding-left: 1em; }
+  footer .info-card p {
+    line-height: 1.5em; }
+  footer .info-card strong {
+    color: #0000FF;
+    font-family: "avenirB", sans-serif; }
   footer .btn-black-social-media {
     margin-bottom: 2.77em; }
   footer .sitemap-pages {
