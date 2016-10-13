@@ -100,13 +100,21 @@
 	li
 		display: inline-block
 	a
+		color: $c-black
 		font-size: 0.722em
-	a:active, a:visited
-		font-family: 'avenirB', sans-serif
+		padding-right: 1.2em
+	a:active, a.current, a:hover
+		color: $c-blue
+		text-decoration: underline
 	a:after
+		color: $c-black
 		content: '>'
-		margin: 0 5px
-	li:last-child a::after
+		top: 0.35em
+		margin-left: 0.4em
+		position: absolute
+	li:last-child a
+		padding-right: 0
+	li:last-child a:after
 		content: ''
 		margin: 0
 

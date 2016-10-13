@@ -39,9 +39,15 @@ $(document).ready(function(){
 	//});
 //});
 
+// When Document is ready:
+$(document).ready( function() {
+	var headerHeight = $("header").outerHeight();
+	var breadcrumbsHeight = $(".nd-nav").outerHeight();
+	var totalHeaderHeight = headerHeight + breadcrumbsHeight;
+	$("body").css({"margin-top" : totalHeaderHeight });
+});
 
-
-// Margin Top Body
+// When Document is resized:
 $(window).on('resize', function(){
 	var headerHeight = $("header").outerHeight();
 	var breadcrumbsHeight = $(".nd-nav").outerHeight();
@@ -49,6 +55,7 @@ $(window).on('resize', function(){
 	$("body").css({"margin-top" : totalHeaderHeight });
 	$(".manifiesto-slider-wrapper").css({"top" : headerHeight});
 	$(".manifiesto-slider-wrapper .up").css({ 'top' : headerHeight });
+	$(".nd-nav").css({ 'top' : headerHeight });
 });
 
 
@@ -188,31 +195,48 @@ $(document).ready(function() {
 	});
 });
 
+// ACCORDION & TOGGLE CONTENT
+// jQuery(".filter-menu ul li a").click(function(event) {
+// 	event.preventDefault();
+// 	var $e = $(this);
+// 	$(this).parent().toggleClass("display");
+// 	if ($e.parent().hasClass("display")){
+// 		$(this).parent().removeClass("opacity_accordion");
+// 		$(this).parent().siblings().addClass("opacity_accordion");
+// 	} else {
+// 		$(this).parent().siblings().removeClass("opacity_accordion");
+// 	}
+// 	$(this).parent().siblings().removeClass("display");
+// });
+
+
 // Series: More Videos Carousell
-$('.more-videos').slick({
-	infinite: true,
-	slidesToShow: 4,
-	slidesToScroll: 2,
-	responsive: [
-	{
-	breakpoint: 1024,
-	settings: {
-			slidesToShow: 3,
-			slidesToScroll: 3
-		}
-	},
-	{
-	breakpoint: 600,
-	settings: {
-			slidesToShow: 2,
-			slidesToScroll: 2
-		}
-	},
-	{
-		breakpoint: 480,
+$(document).ready(function() {
+	$('.more-videos').slick({
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 2,
+		responsive: [
+		{
+		breakpoint: 1024,
 		settings: {
-			slidesToShow: 1,
-			slidesToScroll: 1
-		}
-	}]
+				slidesToShow: 3,
+				slidesToScroll: 3
+			}
+		},
+		{
+		breakpoint: 600,
+		settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}]
+	});
 });
