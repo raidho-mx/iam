@@ -31,13 +31,16 @@ $(document).ready(function(){
 	});
 });
 
-//Second navigation for slider
-//$('.sliderM').each(function(i){
-	//$(this).attr('id', 'mSlide'+ (i+1));
-	// $(".manifiesto-slides ul").each( function(){
-	// 	$(this).append("<li><a href='#mSlide"+ (i+1) + "'>"+ (i+1) +"</a></li>");
-	//});
-//});
+
+// Manifiesto Slider Navigation
+$('.sliderM').each(function(i){
+	$(this).attr('id', 'mSlide'+ (i+1));
+	$(".manifiesto-slides ul").each( function(){
+		var t = ["one", "two", "three", "four", "five", "six"];
+		$(this).append("<li><a href='#mSlide" + (i+1) + "'>" + t[i] + "</a></li>");
+	});
+});
+
 
 // When Document is ready:
 $(document).ready( function() {
@@ -46,6 +49,7 @@ $(document).ready( function() {
 	var totalHeaderHeight = headerHeight + breadcrumbsHeight;
 	$("body").css({"margin-top" : totalHeaderHeight });
 });
+
 
 // When Document is resized:
 $(window).on('resize', function(){

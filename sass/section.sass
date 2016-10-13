@@ -373,6 +373,7 @@ body.noScroll
 
 
 .manifiesto-slick-nd-nav
+	margin-bottom: 1em
 	ul
 		text-align: center
 	li
@@ -400,11 +401,6 @@ body.noScroll
 .manifiesto-slider-wrapper
 	position: relative
 	+transition-duration(0.9s)
-	.manifiesto-slides
-		position: absolute
-		top: 0
-		width: 100%
-		z-index: 3
 	.manifiesto-slider
 		.sliderM
 			display: table
@@ -444,8 +440,26 @@ body.noScroll
 		width: 2em
 		text-align: center
 
+
 #manifiesto2
 	+transition-duration(1.2s)
+
+
+.manifiesto-slides
+	width: 100%
+	margin-bottom: 0.7em
+	ul
+		text-align: center
+	li
+		display: inline-block
+	a
+		padding-right: 1em
+		text-decoration: underline
+		color: $c-black
+	a:hover, a.current
+		color: $c-blue
+	li:last-child a
+		padding-right: 0
 
 
 ul.manifiesto-slide-dots
@@ -530,17 +544,17 @@ ul.manifiesto-slide-dots
 		left: -50%
 	.profile-description
 		margin-bottom: 5.56em
-	figure
+	.profile-img figure
 		margin-top: 30%
-	figure img
+	.profile-img figure img
 		width: 100%
 		border: 0.83em solid $c-blue
-	figcaption
+	.profile-img  figcaption
 		padding: 0 3em
 		margin-top: 2.2em
 		text-align: center
 		color: $c-blue
-	figcaption h3.timesR
+	.profile-img  figcaption h3.timesR
 		margin-top: 0.3em
 	.btn-follow ul
 		text-align: center

@@ -290,7 +290,8 @@ section {
 .breadcrumbs ul {
   text-align: center; }
 .breadcrumbs li {
-  display: inline-block; }
+  display: inline-block;
+  position: relative; }
 .breadcrumbs a {
   color: #000000;
   font-size: 0.722em;
@@ -907,6 +908,7 @@ section {
     width: 100%;
     max-width: 14.44em; }
   .menu-card .info h3 {
+    font-size: 1em;
     text-decoration: underline;
     font-family: "timesR", Times New Roman; }
   .menu-card .info strong {
@@ -1506,28 +1508,30 @@ body.noScroll {
     width: 2em;
     text-align: center; }
 
-.manifiesto-slick-nd-nav ul {
-  text-align: center; }
-.manifiesto-slick-nd-nav li {
-  display: inline-block;
-  position: relative; }
-.manifiesto-slick-nd-nav li a {
-  font-family: "timesR", Times New Roman;
-  text-decoration: underline;
-  color: #000000;
-  margin: 0 10px; }
-.manifiesto-slick-nd-nav li a:hover, .manifiesto-slick-nd-nav li a:active {
-  color: #0000FF; }
-.manifiesto-slick-nd-nav li a:after {
-  content: "|";
-  color: #000000;
-  position: absolute;
-  margin-left: 8px; }
-.manifiesto-slick-nd-nav li:last-child a:after {
-  content: ""; }
-.manifiesto-slick-nd-nav li a.active {
-  font-family: "avenirB", sans-serif;
-  color: #0000FF; }
+.manifiesto-slick-nd-nav {
+  margin-bottom: 1em; }
+  .manifiesto-slick-nd-nav ul {
+    text-align: center; }
+  .manifiesto-slick-nd-nav li {
+    display: inline-block;
+    position: relative; }
+  .manifiesto-slick-nd-nav li a {
+    font-family: "timesR", Times New Roman;
+    text-decoration: underline;
+    color: #000000;
+    margin: 0 10px; }
+  .manifiesto-slick-nd-nav li a:hover, .manifiesto-slick-nd-nav li a:active {
+    color: #0000FF; }
+  .manifiesto-slick-nd-nav li a:after {
+    content: "|";
+    color: #000000;
+    position: absolute;
+    margin-left: 8px; }
+  .manifiesto-slick-nd-nav li:last-child a:after {
+    content: ""; }
+  .manifiesto-slick-nd-nav li a.active {
+    font-family: "avenirB", sans-serif;
+    color: #0000FF; }
 
 .manifiesto-slider-wrapper {
   position: relative;
@@ -1535,11 +1539,6 @@ body.noScroll {
   -o-transition-duration: 0.9s;
   -webkit-transition-duration: 0.9s;
   transition-duration: 0.9s; }
-  .manifiesto-slider-wrapper .manifiesto-slides {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 3; }
   .manifiesto-slider-wrapper .manifiesto-slider .sliderM {
     display: table;
     height: 100%;
@@ -1590,6 +1589,22 @@ body.noScroll {
   -o-transition-duration: 1.2s;
   -webkit-transition-duration: 1.2s;
   transition-duration: 1.2s; }
+
+.manifiesto-slides {
+  width: 100%;
+  margin-bottom: 0.7em; }
+  .manifiesto-slides ul {
+    text-align: center; }
+  .manifiesto-slides li {
+    display: inline-block; }
+  .manifiesto-slides a {
+    padding-right: 1em;
+    text-decoration: underline;
+    color: #000000; }
+  .manifiesto-slides a:hover, .manifiesto-slides a.current {
+    color: #0000FF; }
+  .manifiesto-slides li:last-child a {
+    padding-right: 0; }
 
 ul.manifiesto-slide-dots {
   position: absolute;
@@ -1688,17 +1703,17 @@ ul.manifiesto-slide-dots {
   left: -50%; }
 .single-profile .profile-description {
   margin-bottom: 5.56em; }
-.single-profile figure {
+.single-profile .profile-img figure {
   margin-top: 30%; }
-.single-profile figure img {
+.single-profile .profile-img figure img {
   width: 100%;
   border: 0.83em solid #0000FF; }
-.single-profile figcaption {
+.single-profile .profile-img figcaption {
   padding: 0 3em;
   margin-top: 2.2em;
   text-align: center;
   color: #0000FF; }
-.single-profile figcaption h3.timesR {
+.single-profile .profile-img figcaption h3.timesR {
   margin-top: 0.3em; }
 .single-profile .btn-follow ul {
   text-align: center;
