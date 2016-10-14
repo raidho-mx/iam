@@ -1,32 +1,21 @@
 var infoUrl = 'http://iam-platform.herokuapp.com/api/v1/pages/';
-// $.getJSON( infoUrl, function( data ) {
-// 	var items = [];
-//
-// 	$.each( data, function( key, val ) {
-// 		var items = [];
-// 		items.push( "<li id='" + key + "'>" + val + "</li>" );
-// 	});
-//
-// 	var lista = '<div style="background-color:red; height: 20px; padding: 10px;">' + val.title + '</div>';
-//
-//
-// 	$("body").append(lista);
-// });
-
-
 
 $.getJSON( infoUrl, function( data ) {
 	var items = [];
-	$.each( data, function( key, val ) {
-		items.push( "<li id='" + key + "'>" + val + "</li>" );
+	$.each( data.pages, function( key, val ) {
+		var useTitle = val.meta.type;
+		
+		useTitle = useTitle.replace(/\./g,' ');
+		useTitle = useTitle.split(" ", 2);
+		var firstWord = useTitle[0];
+
+		items.push( "<li id='" + key + "'>" + useTitle + "</li>" );
+		var lista1 = '<div style="background-color:blue; height: 20px; padding: 10px;">' + firstWord +  '</div>';
+		var lista2 = '<div style="background-color:red; height: 20px; padding: 10px;">' + firstWord +  '</div>';
+		if ( firstWord === "series" ) {
+			$("body").append(lista1);
+		} else {
+			$("body").append(lista2);
+		}
 	});
-
-$( "<ul/>", { "class": "my-new-list", html: items.join( "" ) }).appendTo( "body" );
 });
-
-
-// $.getJSON( infoUrl, function(result){
-//         $.each(result, function(i, field){
-//             $("div").append(field + " ");
-//         });
-//     });

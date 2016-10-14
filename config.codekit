@@ -306,8 +306,8 @@
 		},
 	"\/js\/jQuery.scrollSpeed.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/jQuery.scrollSpeed.js",
 		"outputAbbreviatedPath": "\/js\/min\/jQuery.scrollSpeed-min.js",
 		"outputPathIsOutsideProject": 0,
@@ -317,8 +317,8 @@
 		},
 	"\/js\/tdfw.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/tdfw.js",
 		"outputAbbreviatedPath": "\/js\/min\/tdfw-min.js",
 		"outputPathIsOutsideProject": 0,
