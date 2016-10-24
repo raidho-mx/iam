@@ -40,7 +40,7 @@ $(window).on('resize', function(){
 $(document).ready(function(){
 	var expadedNav = $("#expandedHeight").outerHeight();
 	$(".expanded-nav").css({"margin-top": - expadedNav});
-	$(".open-menu").click(function(){
+	$("#burger").click(function(){
 		if ($(".expanded-nav").hasClass("hide")){
 			$(".expanded-nav").removeClass("hide");
 			$(".expanded-nav").css({"margin-top" : 0 });

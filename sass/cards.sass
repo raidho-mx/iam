@@ -1,6 +1,5 @@
 // general
 .info-window
-	min-width: 11.11em
 	text-align: left
 	font-size: 18px
 	.bar
@@ -8,7 +7,6 @@
 		width: 100%
 		height: 11px
 		padding: 0px 4px
-		margin-bottom: 5px
 		position: relative
 		&:after
 			content: '• • •'
@@ -23,17 +21,28 @@
 		float: left
 		font-family: 'timesR', Times New Roman
 		+bg-white-blue-border
-		+generic-shadow
+		+solid-shadow
 		width: 100%
 		white-space: normal
+		position: relative
+	.txt:after
+		border-right: 2px solid white
+		border-bottom: 2px solid white
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 3px
+		left: 3px
 	.info
-		max-width: 11.11em
+		width: 11.11em
 	.info h2
-		font-family: 'timesB', Times New Roman
+		font-family: "avenirB", sans-serif
 		margin-bottom: 0.55em
 		font-size: 1em
 	.info p
 		font-family: 'timesR', Times New Roman
+		font-size: 0.77em
 
 // profile card + info window
 .profile-card
@@ -44,15 +53,13 @@
 	.img
 		+bg-img
 		display: block
-		height: 4.7em
-		width: 4.7em
+		height: 4.4em
+		width: 4.4em
 	.cta
-		+generic-shadow
 		display: inline-block
 	.info-window
 		position: relative
 		float: left
-		top: -19px
 	.info
 		margin-left: 4.4em
 	.txt p
@@ -160,7 +167,6 @@
 		height: 12.2em
 		max-width: 100%
 	.cta
-		+generic-shadow
 		float: right
 	.info-window
 		display: block
@@ -303,6 +309,7 @@
 	max-width: 22.22em
 	display: inline-block
 	input[type="text"]
+		float: left
 		border: 5px solid $c-black
 		background: $c-white
 		display: inline-block
@@ -324,6 +331,8 @@
 .newsletter-box2
 	max-width: 22.22em
 	display: inline-block
+	.cta
+		float: left
 	input[type="text"]
 		+generic-shadow
 		border: 5px solid $c-blue
@@ -350,10 +359,6 @@
 		position: relative
 	input[type="submit"]:active
 		box-shadow: 2px 2px 0px 0px $c-blue
-		// border-top: 4px solid $c-gray-dark
-		// border-left: 4px solid #cacaca
-		// border-right: 0px solid $c-gray-dark
-		// border-bottom: 0px solid $c-gray-dark
 		left: 2px
 		top: 2px
 		position: relative
@@ -370,6 +375,65 @@
 			color: $c-white
 			position: absolute
 			top: 0
+
+
+
+// newsletter card
+.newsletter-card
+	max-width: 22.22em
+	display: inline-block
+	.cta
+		float: left
+	input[type="text"]
+		+sharp-shadow
+		border: 1px solid $c-black
+		background: $c-white
+		color: $c-blue
+		display: inline-block
+		font-family: 'timesB', Times New Roman
+		margin-right: 1.11em
+		padding: 1.4em 1.2em
+		width: 100%
+		@include input-placeholder
+			color: $c-blue
+			opacity: 1
+	input[type="submit"]
+		+sharp-shadow
+		height: 44px
+		text-decoration: underline
+		background: $c-blue
+		color: $c-white
+		padding: 0.7em 1.7em
+		float: left
+		position: relative
+	// input[type="submit"]:active
+	// 	+sharp-shadow
+	// 	left: 2px
+	// 	top: 2px
+	// 	position: relative
+	// 	height: 40px
+	.button
+		height: 40px
+		margin-top: -1em
+		position: relative
+		display: inline-block
+	span
+		position: absolute
+		display: inline-block
+		left: 0
+		width: 100%
+		pointer-events: none
+		z-index: 3
+	span:after
+		content: ''
+		border: 1px solid $c-white
+		position: absolute
+		width: 94%
+		left: 4px
+		height: 36px
+		top: 4px
+
+
 
 
 // instagram box
@@ -400,7 +464,7 @@
 .twitter-box
 	display: inline-block
 	position: relative
-	max-width: 12.22em
+	max-width: 430px
 	a
 		display: inline-block
 	.txt
@@ -412,7 +476,6 @@
 	.image
 		position: absolute
 		bottom: 40%
-		left: 20%
 	.image img
 		max-width: 17.22em
 
@@ -539,9 +602,114 @@
 		width: 100%
 		max-width: 14.44em
 	.info h3
-		font-size: 1em 
+		font-size: 1em
 		text-decoration: underline
 		font-family: 'timesR', Times New Roman
 	.info strong
 		font-family: "avenirB", sans-serif
 		font-size: 0.778em
+
+
+//I'VE JUST GOT AN IDEA!! LET'S BUILD A THIRD STYLE
+.project-card2
+	margin-bottom: -200px
+	display: inline-block
+	position: relative
+	.image
+		display: inline-block
+	.info-window
+		width: 14.44em
+		text-align: left
+		font-size: 18px
+		position: relative
+		left: 55%
+		bottom: 50px
+	.cta
+		margin-top: 10px
+		float: left
+
+.project-card2-left
+	display: inline-block
+	position: relative
+	.image
+		display: inline-block
+	.info-window
+		width: 14.44em
+		text-align: left
+		font-size: 18px
+		position: relative
+		left: -15%
+		bottom: 50px
+	.btn-bold-under-bgblue
+		float: left
+
+.video-card2
+	.video-card .host
+		display: inline-block
+		width: 4.4em
+		height: 4.4em
+	.info-window
+		display: block
+		position: absolute
+		bottom: -6em
+		left: -2em
+	.info-window .info
+		display: inline-block
+		margin-left: -5px
+
+.profile-card2
+	.image
+		position: relative
+	.info
+		margin-left: 0
+	.info-window .txt
+		box-shadow: none
+	.cta
+		left: -80px
+		margin-top: 4px
+		float: left
+	.info-window .txt:after
+		border-right: none
+		border-bottom: none
+
+
+.twitter-box2
+	.info-window .txt
+		padding: 0.7em
+		box-shadow: 5px 5px 0px 0px black
+		word-break: break-word
+		font-size: 28px
+		color: $c-black
+		font-family: 'timesB', Times New Roman
+	a
+		color: $c-blue
+	.image
+		bottom: 60%
+		right: 40%
+		left: inherit
+	.icon
+		left: -15px
+
+.instagram-box2
+	.icon
+		left: -15px
+
+.blue-card2
+	.bg-blue
+		margin-bottom: 5px
+	.txt
+		box-shadow: none
+		border: 3px solid $c-blue
+	.txt:after
+		border-right: 3px solid $c-blue
+		border-bottom: 3px solid $c-blue
+		width: 101%
+		height: 105%
+		top: 2px
+		left: 6px
+	.cta
+		+solid-shadow
+		margin-top: 1.1em
+
+#childElements li
+	padding: 0 50px

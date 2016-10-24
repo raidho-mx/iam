@@ -22,16 +22,29 @@
 	color: $c-white
 	font-family: 'avenirB'
 	font-size: 14px
-	padding: 1em 1.11em
+	padding: 0.7em 1.11em
 	text-decoration: underline
 	text-align: center
+	position: relative
+	display: inline-block
+	margin-top: 8px
+	+solid-shadow
+	&:after
+		position: absolute
+		content: ""
+		border: 1px solid white
+		width: 95%
+		height: 84%
+		top: 3px
+		z-index: 1
+		left: 3px
 
 .btn-bold-under-bgblack
 	background-color: $c-black
 	color: $c-white
 	font-family: 'avenirB'
 	font-size: 14px
-	padding: 1em 1.11em
+	padding: 0.7em 1.11em
 	text-decoration: underline
 	text-align: center
 
@@ -104,7 +117,9 @@
 		color: $c-black
 		font-size: 0.722em
 		padding-right: 1.2em
-	a:active, a.current, a:hover
+	a:active,
+	a.current,
+	a:hover
 		color: $c-blue
 		text-decoration: underline
 	a:after

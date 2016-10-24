@@ -10,14 +10,18 @@
 .framed-header
 	margin: 1.667em
 
+
 header
 	background: $c-white
 	color: $c-black
+	float: left
 	+padding-wrap
 	padding-top: 1.1em
 	padding-bottom: 1.1em
-	float: left
+	position: fixed
+	top: 0
 	width: 100%
+	z-index: 5
 	a
 		color: $c-black
 	li
@@ -48,6 +52,11 @@ header
 			padding-right: 0
 	.media
 		float: right
+	@media (max-width: $tablet_b)
+		.menu
+			left: inherit
+		.media
+			display: none
 
 footer
 	background: $c-white
@@ -90,6 +99,8 @@ footer
 		display: block
 		margin-top: 1.1em
 		margin-left: 0.5em
+	.dont-push .tdfw-btn img
+		max-width: 3.33em
 	.info-card
 		width: 70%
 		padding-left: 1em
@@ -203,8 +214,11 @@ footer
 	.see-more
 		bottom: 30px
 		float: left
+		text-align: center
 		position: absolute
 		width: 100%
+	.dont-push
+		display: inline-block
 	.sitemap, .btn-follow
 		display: inline-block
 		text-align: center
@@ -226,15 +240,7 @@ footer
 			bottom: 0
 		.sitemap, .btn-follow
 			text-align: left
-
-header
-	position: fixed
-	top: 0
-	z-index: 5
-
-header.opened
-	position: relative
-
+// BIG NAVIGATION EXPANDED
 .expanded-nav.opened
 	margin-top: 0!important
 	position: fixed
@@ -245,9 +251,9 @@ header.opened
 		+transition(all ease 0.4s)
 		opacity: 1
 		overflow-y: auto
-
 body.noScroll
 	overflow: hidden
+
 
 //SECONDARY NAV
 .nd-nav
@@ -260,96 +266,13 @@ body.noScroll
 		padding-bottom: 1.11em
 
 
-// MOVE THIS NEW CARDS
-.right-img-card
-	display: table
-	color: $c-white
-	.img
-		+bg-img
-		+generic-shadow
-		padding-bottom: 4.44em
-		width: 4.44em
-	.info
-		display: table-cell
-		padding-left: 1.11em
-		vertical-align: top
-		width: auto
-	.info h3
-		font-size: 1.11em
-		font-family: 'timesR', Times New Roman
-	.info small
-		display: block
-		font-size: 0.778em
-		font-family: 'avenirB', sans-serif
-
-.multiple-img-card
-	.img
-		margin-bottom: 1.11em
-	.img img
-		+generic-shadow
-		max-height: 4.4em
-	.img li
-		margin-bottom: 0!important
-	.img li:nth-child(1)
-		margin-left: 1.11em
-	.img li:nth-child(2)
-		margin-top: -15%
-	.info h3
-		font-size: 1.11em
-		margin-bottom: 1em
-		font-family: 'timesR', Times New Roman
-	.info h3 small
-		display: block
-		font-family: 'avenirB', sans-serif
-		font-size: 0.778em
-	.info p
-		font-size: 0.778em
-
-.ltr-scroll
-	.wrap
-		display: table
-		height: 100%
-	.parent-container
-		width: auto
-		height: 100vh
-		overflow-x: scroll
-		overflow-y: hidden
-		white-space: nowrap
-	.message
-		+table-cell
-		color: $c-blue
-		font-family: 'timesB', Times New Roman
-		font-size: 16em
-		padding: 0 5%
-	.listed-elements
-		position: absolute
-		left: 0
-		width: 100%
-		height: 100%
-		display: table
-	.listed-elements ul#childElements
-		+table-cell
-		width: 100%
-		height: 100%
-		padding: 0 20em
-	.listed-elements #childElements > li
-		+transition(all ease 0.6s)
-		opacity: 0
-		display: inline-block
-		vertical-align: middle
-		position: relative
-	.listed-elements #childElements > li:nth-child(even)
-		margin-top: -50px
-	.listed-elements #childElements > li:nth-child(odd)
-		margin-top: 50px
-
-
-// Manifiesto page
+// MANIFIESTO PARENT PAGE
 .manifiesto-intro
 	+transition-duration(0.9s)
 	height: 91vh
 	width: 100%
 	background-color: $c-white
+	z-index: 3
 	.main-quote
 		display: table
 		height: 80%
@@ -370,42 +293,59 @@ body.noScroll
 		bottom: 30px
 		width: 2em
 		text-align: center
+	@media (max-width: $phone_b)
+		.main-quote .center h1
+			font-size: 2.66em
 
 
-.manifiesto-slick-nd-nav
-	margin-bottom: 1em
-	ul
-		text-align: center
-	li
-		display: inline-block
-		position: relative
-	li a
-		font-family: 'timesR', Times New Roman
-		text-decoration: underline
-		color: $c-black
-		margin: 0 10px
-	li a:hover, li a:active
-		color: $c-blue
-	li a:after
-		content: '|'
-		color: $c-black
-		position: absolute
-		margin-left: 8px
-	li:last-child a:after
-		content: ''
-	li a.active
-		font-family: 'avenirB', sans-serif
-		color: $c-blue
+// .manifiesto-slick-nd-nav
+// 	margin-bottom: 1em
+// 	ul
+// 		text-align: center
+// 	li
+// 		display: inline-block
+// 		position: relative
+// 	li a
+// 		font-family: 'timesR', Times New Roman
+// 		text-decoration: underline
+// 		color: $c-black
+// 		margin: 0 10px
+// 	li a:hover, li a:active
+// 		color: $c-blue
+// 	li a:after
+// 		content: '|'
+// 		color: $c-black
+// 		position: absolute
+// 		margin-left: 8px
+// 	li:last-child a:after
+// 		content: ''
+// 	li a.active
+// 		font-family: 'avenirB', sans-serif
+// 		color: $c-blue
 
 
+// MANIFIESTO SLIDER STYLES
 .manifiesto-slider-wrapper
 	position: relative
 	+transition-duration(0.9s)
+	.up
+		+center-absolute
+		top: 140px
+		width: 2em
+		text-align: center
+	.down
+		+center-absolute
+		bottom: 60px
+		width: 2em
+		text-align: center
 	.manifiesto-slider
+		width: 100%
 		.sliderM
 			display: table
 			height: 100%
 			width: 100%
+			//opacity: 0
+			//left: 100px
 			position: relative
 		.sliderM .txt
 			+table-cell
@@ -423,31 +363,33 @@ body.noScroll
 			font-family: 'timesB', Times New Roman
 			position: absolute
 			left: -1.5em
+		.sliderM .dont-push img
+			display: block
+			padding-top: 2.22em
+			margin: 0 auto
 		@media (max-width: $tablet_b)
 			.sliderM .txt > div
 				padding: 0 10%
 			.sliderM .txt p
 				font-size: 1em
-	.up
-		+center-absolute
-		top: 190px
-		width: 2em
-		text-align: center
-		z-index: 5
-	.down
-		+center-absolute
-		bottom: 60px
-		width: 2em
-		text-align: center
+			.sliderM .txt span
+				left: 0
+				position: relative
+				margin-right: 1em
+			.up
+				display: block
+				position: relative
+				top: -20px
+			.down
+				bottom: -20px
+				display: block
+				position: relative
 
 
-#manifiesto2
-	+transition-duration(1.2s)
-
-
+// MANIFIESTO NUMBERED NAV
 .manifiesto-slides
 	width: 100%
-	margin-bottom: 0.7em
+	margin-bottom: 2.22em
 	ul
 		text-align: center
 	li
@@ -462,26 +404,27 @@ body.noScroll
 		padding-right: 0
 
 
-ul.manifiesto-slide-dots
-	position: absolute
-	bottom: 110px
-	width: 100%
-	text-align: center
-	li
-		display: inline-block
-	li button
-		border: none
-		color: rgba(0,0,0,0)
-		display: inline-block
-		height: 3px
-		padding: 0
-		width: 1.667em
-		background-color: #EFEEED
-		margin-right: 10px
-	li.slick-active button
-		background-color: #9B9B9B
+// ul.manifiesto-slide-dots
+// 	position: absolute
+// 	bottom: 110px
+// 	width: 100%
+// 	text-align: center
+// 	li
+// 		display: inline-block
+// 	li button
+// 		border: none
+// 		color: rgba(0,0,0,0)
+// 		display: inline-block
+// 		height: 3px
+// 		padding: 0
+// 		width: 1.667em
+// 		background-color: #EFEEED
+// 		margin-right: 10px
+// 	li.slick-active button
+// 		background-color: #9B9B9B
 
 .manifiesto-foot
+	margin-top: 8.33em
 	background: $c-white
 	+transition-duration(0.9s)
 	+pt-100
@@ -528,12 +471,139 @@ ul.manifiesto-slide-dots
 			padding-left: 1em
 	.up
 		+center-absolute
-		top: 190px
+		top: -40px
 		width: 2em
 		text-align: center
 
 
-// Profile Page
+// MANIESTO SINGLE PAGE: LeftToRight BIG SCROLL
+.ltr-scroll
+	background: $c-white
+	position: fixed
+	z-index: 2
+	.parent-container
+		height: 90vh
+		overflow-x: scroll
+		overflow-y: hidden
+		width: auto
+	.wrap
+		display: table
+		height: 100%
+	.message
+		+table-cell
+		padding: 0 3%
+	.message .txt
+		color: $c-blue
+		font-family: 'timesB', Times New Roman
+		font-size: 22.22em
+		white-space: nowrap
+	.message .small-txt
+		max-width: 33.33em
+		font-family: 'avenirR', sans-serif
+		position: relative
+		white-space: normal
+		z-index: 1
+	.message .small-txt b,
+	.message .small-txt strong
+		font-family: 'avenirB', sans-serif
+	.message .small-txt a
+		color: $c-blue
+	.listed-elements
+		display: table
+		height: 100%
+		left: 0
+		position: absolute
+		width: 100%
+	.listed-elements ul#childElements
+		+table-cell
+		width: 100%
+		height: 100%
+		padding: 0 9em
+	.listed-elements #childElements > li
+		+transition(all ease 0.6s)
+		opacity: 0
+		display: inline-block
+		vertical-align: middle
+		position: relative
+	.listed-elements #childElements > li:nth-child(even)
+		margin-top: -50px
+	.listed-elements #childElements > li:nth-child(odd)
+		margin-top: 50px
+
+
+// MANIESTO SINGLE PAGE: LeftToRight BIG SCROLL
+.single-manifiesto
+	background: $c-white
+	width: 100%
+	position: fixed
+	// submenu w/ carrusell
+	.manifiesto-submenu.expandSubmenu
+		height: 110px
+		+transition(height ease 0.4s)
+	.expand-manifiesto-submenu
+		width: 100%
+		cursor: pointer
+		display: inline-block
+		height: 40px
+		left: 0
+		padding: 0.833em 0
+		text-align: center
+		color: $c-white
+		background: $c-black
+		font-family: 'avenirB', sans-serif
+		font-size: 0.77em
+		z-index: 3
+	.manifiesto-submenu
+		height: 0
+		background: $c-white
+		position: relative
+		+padding-wrap
+		+transition(height ease 0.4s)
+		.slick-slide
+			float: left
+			width: 25%
+			height: auto
+			margin-top: 0.7em
+		a
+			color: $c-black
+		li:hover a h1
+			color: $c-blue
+		p
+			color: $c-black
+			display: inline-block
+			margin: 1.1em 0
+			padding-left: 1.1em
+			width: 60%
+		b, strong
+			font-family: 'avenirB', sans-serif
+		h1
+			font-family: 'timesB', Times New Roman
+			font-size: 3.55em
+			display: inline-block
+			vertical-align: top
+	.manifiesto-submenu:before
+		content: ''
+		height: 100px
+		+bg-white-gradient
+		+padding-wrap-left
+		top: 0
+		position: absolute
+		width: 100px
+		z-index: 1
+	.manifiesto-submenu:after
+		content: ''
+		height: 100px
+		+bg-white-gradient
+		+padding-wrap-right
+		top: 0
+		position: absolute
+		width: 100px
+		z-index: 1
+		+transform(rotate(180deg))
+
+
+
+// PROFILE SINGLE PAGE
 .single-profile
 	.profile-img
 		position: relative
@@ -593,6 +663,8 @@ ul.manifiesto-slide-dots
 		color: $c-blue
 	.filter-menu .halfs
 		padding-top: 0
+	#tab-1
+		display: block
 	.container
 		background-color: $c-white
 		float: left
@@ -657,3 +729,111 @@ ul.manifiesto-slide-dots
 		margin-bottom: 1.66em
 	li
 		padding-right: 1.66em
+
+
+// HOME PAGE: LeftToRight BIG SCROLL
+.ltr-scroll-home
+	background: $c-white
+	position: fixed
+	height: 100vh
+	z-index: 2
+	+padding-left
+	white-space: nowrap
+	.message .txt
+		color: $c-blue
+		font-family: 'timesB', Times New Roman
+		font-size: 16.67em
+		white-space: nowrap
+	.message .small-txt
+		max-width: 33.33em
+		bottom: 10em
+		font-family: 'avenirR', sans-serif
+		position: absolute
+		white-space: normal
+		z-index: 1
+	.message .small-txt b,
+	.message .small-txt strong
+		font-family: 'avenirB', sans-serif
+	.message .small-txt a
+		color: $c-blue
+	.main-content,
+	.featured-content
+		display: inline-block
+		vertical-align: top
+	.main-content header
+		padding-left: 0
+		padding-right: 0
+	.main-content header,
+	.main-content .nd-nav
+		+wrap
+	.featured-content
+		+bg-img
+		position: relative
+		margin-left: -7px
+	.featured-content .description
+		max-width: 26.11em
+		left: 10%
+		+pt-100
+		position: absolute
+		top: 20%
+		white-space: normal
+		font-family: 'avenirB', sans-serif
+		z-index: 2
+	.featured-content .description h2
+		margin-bottom: 1.2em
+	.homepage-slider
+		width: 80%
+		margin: 0 auto
+		position: relative
+	.homepage-slider.blue-mask
+		&:after
+			content: ""
+			height: 100%
+			left: 0
+			top: 0
+			position: absolute
+			width: 22.2em
+			z-index: 1
+			+slider-blue-gradient
+	.homepage-slider.white-mask
+		&:before
+			content: ""
+			height: 100%
+			left: 0
+			top: 0
+			position: absolute
+			width: 22.2em
+			z-index: 1
+			+slider-white-gradient
+	.homepage-slider li
+		padding: 80px 0
+		height: 100vh
+	.homepage-slider li > div
+		+bg-img
+		width: 100%
+		height: 100%
+	.homepage-slider .slick-dots
+		position: absolute
+		bottom: 10em
+		left: 0
+		right: 0
+		margin: 0 auto
+		height: 0
+		text-align: center
+	.homepage-slider .slick-dots li
+		height: 20px
+		width: 20px
+		display: inline-block
+		margin-right: 10px
+		padding: 10px
+	.homepage-slider .slick-dots li.slick-active button
+		background: $c-blue
+	.homepage-slider .slick-dots li button
+		background: $c-black
+		color: rgba(0,0,0,0)
+		height: 20px
+		width: 20px
+		+border-radius(20px)
+	@media (max-width: $med_b)
+		.message .txt
+			font-size: 10em
