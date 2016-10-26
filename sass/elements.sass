@@ -85,3 +85,196 @@
 		float: left
 		margin-top: 1.2em
 		position: relative
+
+
+// Huge Slider
+.featured-content
+	+bg-img
+	height: 90vh
+	position: relative
+	.description
+		max-width: 26.11em
+		left: 10%
+		+pt-100
+		position: absolute
+		top: 2%
+		white-space: normal
+		font-family: 'avenirB', sans-serif
+		z-index: 2
+	.description .txt,
+	.description .txt p
+		margin-bottom: 2em
+	.description .ticket-card
+		margin-top: 5em
+	.description h2
+		margin-bottom: 1em
+	.center-button
+		width: 100%
+		display: block
+		position: relative
+		bottom: 6em
+		z-index: 2
+	.center-button .blue-cta
+		display: block
+		margin: 0 auto
+		width: 9em
+	@media (max-width: $large_b)
+		.description
+			max-width: 36.11em
+			top: 0
+			padding-top: 4.11em
+		.description .ticket-card
+			margin-top: 0
+			margin-left: 9.89em
+		.center-button
+			bottom: 5em
+	@media (max-width: $tablet_b)
+		+padding-wrap
+		display: block
+		float: left
+		margin-left: 0
+		width: 100%
+		.description
+			top: 4em
+			left: 5%
+			right: 5%
+		.description .ticket-card
+			display: none
+	@media (max-width: $phone_b)
+		padding-bottom: 3em
+		height: auto
+		.description
+			top: 0
+			padding-top: 2em
+			position: relative
+		.center-button
+			bottom: 0
+			left: 5%
+		.center-button .blue-cta
+			margin: inherit
+			width: auto
+
+
+
+// HUGE  SLIDER: Masks
+.huge-slider.blue-mask:after
+	content: ""
+	height: 100%
+	left: -1px
+	top: 0
+	position: absolute
+	width: 60%
+	z-index: 1
+	+slider-blue-gradient
+	@media (max-width: $tablet_b)
+		width: 80%
+	@media (max-width: $phone_b)
+		display: none
+.huge-slider.gray-mask:before
+	content: ""
+	height: 100%
+	left: -1px
+	top: 0
+	position: absolute
+	width: 60%
+	z-index: 1
+	+slider-gray-gradient
+	@media (max-width: $tablet_b)
+		width: 80%
+	@media (max-width: $phone_b)
+		display: none
+.huge-slider.white-mask:before
+	content: ""
+	height: 100%
+	left: -1px
+	top: 0
+	position: absolute
+	width: 60%
+	z-index: 1
+	+slider-white-gradient
+	@media (max-width: $tablet_b)
+		width: 80%
+	@media (max-width: $phone_b)
+		display: none
+
+
+
+// HUGE SLIDER SETUP
+.huge-slider
+	width: 75%
+	height: 90vh
+	margin: 0 auto
+	position: relative
+	li
+		padding: 4.4em 0
+		height: 85vh
+	li > div
+		+bg-img
+		width: 100%
+		height: 100%
+	.slick-dots
+		+center-absolute
+		bottom: 11em
+		height: 0
+		text-align: center
+		z-index: 3
+	.slick-dots li
+		height: 20px
+		width: 20px
+		display: inline-block
+		margin-right: 10px
+		padding: 10px
+	.slick-dots li.slick-active button
+		background: $c-blue
+	.slick-dots li button
+		background: $c-black
+		color: rgba(0,0,0,0)
+		height: 20px
+		width: 20px
+		font-size: 0
+		+border-radius(20px)
+	@media (max-width: $large_b)
+		li
+			padding: 3.4em 0
+	@media (max-width: $tablet_b)
+		width: 100%
+	@media (max-width: $phone_b)
+		height: 20em
+		li
+			height: 20em
+			padding-bottom: 0
+		.slick-dots
+			opacity: 0
+
+
+
+
+// HERO BLOCK
+.hero-block
+	+bg-img
+	width: 100%
+	position: relative
+	strong, b
+		font-family: "avenirB", sans-serif
+	h1
+		font-size: 11.11em
+		font-family: "avenirB", sans-serif
+	h4
+		margin-top: 1em
+		color: $c-white
+	.title
+		+ptb-100
+	@media (max-width: $tablet_b)
+		h1
+			font-size: 2em
+	@media (max-width: $phone_b)
+		h1
+			font-size: 1.55em
+
+// BIG DESCRIPTION
+.description-block
+	+ptb-100
+	font-family: "avenirB", sans-serif
+	width: 80%
+	@media (max-width: $tablet_b)
+		width: 100%

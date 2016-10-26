@@ -5,9 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/reset.css" media="screen" title="no title" charset="utf-8">
-	<link rel="stylesheet" href="css/jquery.jscrollpane.css" media="screen" title="no title" charset="utf-8">
-	<link rel="stylesheet" href="css/index.css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	<link rel="stylesheet" href="css/index.css" media="screen" title="no title" charset="utf-8">
 	<title>IAM | Bienvenido</title>
 </head>
 <body style="margin-top: 88px;">
@@ -30,12 +29,8 @@
 						<li><a href="#">News</a></li>
 					</ul>
 					<div class="newsletter-card">
-						<div class="bar bg-blue"></div>
 						<input type="text" placeholder="Subscribe to our weekly feed of randomness"/>
-						<div class="button">
-							<span></span>
-							<input type="submit" value="Submit"/>
-						</div>
+						<button class="blue-cta">Submit</button>
 					</div>
 				</div>
 				<div class="featured-content">
@@ -46,7 +41,7 @@
 						<ul>
 							<li>
 								<a href="#" class="menu-card">
-									<div class="img" style="background-image: url('http://lorempixel.com/180/180/sports')"></div>
+									<div class="img" style="background-image: url('img/h1.png')"></div>
 									<div class="info">
 										<strong>Upcoming Event - Apr 2017</strong>
 										<h3>The Renaissance of Utopias</h3>
@@ -62,7 +57,7 @@
 						<ul>
 							<li>
 								<a href="#" class="menu-card">
-									<div class="img" style="background-image: url('http://lorempixel.com/180/180/sports')"></div>
+									<div class="img" style="background-image: url('img/h2.png')"></div>
 									<div class="info">
 										<strong>New Series</strong>
 										<h3>We Are Internet.</h3>
@@ -78,7 +73,7 @@
 						<ul>
 							<li>
 								<a href="#" class="menu-card">
-									<div class="img" style="background-image: url('http://lorempixel.com/180/180/sports')"></div>
+									<div class="img" style="background-image: url('img/h3.png')"></div>
 									<div class="info">
 										<strong>Recent Project - Tate x IAM</strong>
 										<h3>(random) co:jams</h3>
@@ -98,39 +93,33 @@
 		</div>
 	</div>
 </div>
+<header>
+	<nav class="main-nav">
+		<ul class="pages">
+			<li><a href="#" class="open-menu">🍔</a></li>
+			<li><a href="#">Weekend</a></li>
+			<li><a href="#">Videos</a></li>
+			<li><a href="#">Labs</a></li>
+		</ul>
+		<div class="menu">
+			<a href="index.html" class="iam">IAM</a>
+		</div>
+		<div class="media">
+			<a href="#">Join our Newsletter 😀</a>
+		</div>
+	</nav>
+	<div class="nd-nav">
+		<div class="breadcrumbs">
+			<ul>
+				<li><a href="#" class="current">Home</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
 
 <section>
 	<div class="ltr-scroll-home">
 		<div class="main-content">
-			<header>
-				<nav class="main-nav">
-					<ul class="pages">
-						<li><a href="#" class="open-menu">🍔</a></li>
-						<li><a href="#">Weekend</a></li>
-						<li><a href="#">Videos</a></li>
-						<li><a href="#">Labs</a></li>
-					</ul>
-					<div class="menu">
-						<a href="index.html" class="iam">IAM</a>
-					</div>
-					<div class="media">
-						<ul class="btn-follow">
-							<li><a href="#">Join our Newsletter 😀</a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-						</ul>
-					</div>
-				</nav>
-			</header>
-
-			<div class="nd-nav">
-				<div class="breadcrumbs">
-					<ul>
-						<li><a href="#" class="current">Home</a></li>
-					</ul>
-				</div>
-			</div>
-
 			<div class="message">
 				<div class="txt">We’re <span class="iam">IAM</span></div>
 				<div class="small-txt">Internet is not only technology. Internet is people. Internet is a network of networks and internet culture is a culture of cultures.<strong> We celebrate internet culture</strong>, because we <a href="#">“have to taste a culture to understand it.”</a></div>
@@ -138,36 +127,55 @@
 		</div>
 
 		<div class="featured-content" style="background-color:#0000FF;">
-			<ul class="homepage-slider blue-mask">
+			<ul class="huge-slider blue-mask">
 				<li><div style="background-image: url('img/s1.png');"></div></li>
 				<li><div style="background-image: url('img/s2.png');"></div></li>
 			</ul>
 			<div class="description" style="color: #fff;">
-				<h2>IAM Weekend17: The Renaissance of Utopias</h2>
-				<p>30+ Talks. 10+ Workshops. </br></br>
-				April 27th–30th, 2017</p>
+				<div class="txt">
+					<h2>IAM Weekend17: The Renaissance of Utopias</h2>
+					<p>30+ Talks. 10+ Workshops. </br></br>
+					April 27th–30th, 2017</p>
+				</div>
+				<div class="ticket-card">
+					<a href="#" class="cta"><p>Buy Tickets</p></a>
+					<div class="txt">
+						<h4><span class="iam">IAM</span> Weekend17</h4>
+						<p><strong>MEGA EARLY-BIRD 🐣 </strong>
+						Tickets is now available.</p>
+					</div>
+				</div>
+			</div>
+			<div class="center-button">
+				<button class="blue-cta">Learn more</button>
 			</div>
 		</div>
 
 		<div class="featured-content" style="background: #FFF;">
-			<ul class="homepage-slider white-mask">
+			<ul class="huge-slider white-mask">
 				<li><div style="background-image: url('img/s2.png');"></div></li>
 			</ul>
 			<div class="description">
-				<h2>IAM Weekend17: The Renaissance of Utopias</h2>
-				<p>30+ Talks. 10+ Workshops. </br> </br>
-				April 27th–30th, 2017</p>
+				<div class="txt">
+					<h2 style="color: #0101FF;">IAM Weekend17: The Renaissance of Utopias</h2>
+					<p>30+ Talks. 10+ Workshops. </br> </br>
+					April 27th–30th, 2017</p>
+				</div>
+				<button class="blue-cta">Learn more</button>
 			</div>
 		</div>
 
-		<div class="featured-content" style="background-image: url('https://theresponsivei.files.wordpress.com/2015/10/c40bfaa7fece35c168e2431dc5a4f248.gif'); background-repeat:repeat;     background-size: inherit;">
-			<ul class="homepage-slider">
-				<!-- <li><div style="background-image: url('http://lorempixel.com/180/180/sports');"></div></li> -->
-			</ul>
-			<div class="description" style="color:#fff; background:black; padding: 30px 40px;">
-				<h2>IAM Weekend17: The Renaissance of Utopias</h2>
-				<p>30+ Talks. 10+ Workshops. </br> </br>
-				April 27th–30th, 2017</p>
+		<div class="featured-content" style="background-image: url('https://media.giphy.com/media/6TmEeNSN58VtC/giphy.gif');">
+			<!--<ul class="huge-slider">
+				 <li><div style="background-image: url('http://lorempixel.com/180/180/sports');"></div></li>
+			</ul> -->
+			<div class="description">
+				<div class="txt" style="color:#fff;">
+					<h2>IAM Weekend17: The Renaissance of Utopias</h2>
+					<p>30+ Talks. 10+ Workshops. </br> </br>
+					April 27th–30th, 2017</p>
+				</div>
+				<button class="blue-cta">Learn more</button>
 			</div>
 		</div>
 	</div>

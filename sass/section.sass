@@ -1,16 +1,4 @@
 /* SECTION */
-
-.kidnapped
-	.expanded-nav .wrap
-		overflow-y: scroll
-
-.full-header
-	padding: 1.667em
-
-.framed-header
-	margin: 1.667em
-
-
 header
 	background: $c-white
 	color: $c-black
@@ -24,6 +12,8 @@ header
 	z-index: 5
 	a
 		color: $c-black
+	a:hover, .current
+		color: $c-blue
 	li
 		display: inline-block
 	.menu
@@ -43,7 +33,6 @@ header
 		font-family: 'avenirB', sans-serif
 	.pages
 		float: left
-		font-family: 'timesR', Times New Roman
 	.pages .iam
 		font-size: 1.33em
 	.pages li
@@ -52,6 +41,7 @@ header
 			padding-right: 0
 	.media
 		float: right
+		font-family: 'avenirR', sans-serif
 	@media (max-width: $tablet_b)
 		.menu
 			left: inherit
@@ -59,23 +49,28 @@ header
 			display: none
 
 footer
-	background: $c-white
+	background: $c-gray-light
 	float: left
 	width: 100%
 	+ptb-100
+	padding-top: 8em
 	b
 		font-family: 'avenirB', sans-serif
 	.wrap
-		+three_col
+		+two_col
 		+padding-wrap
+		vertical-align: top
 		font-size: 0
 		width: 100%
 	.wrap > div
 		display: inline-block
-		vertical-align: bottom
+		vertical-align: top
 		font-size: 18px
+	.sitemap
+		max-width: 20em
 	.sitemap li
 		display: inline-block
+		line-height: 1.6em
 	.sitemap a
 		color: $c-black
 		font-family: 'timesR', Times New Roman
@@ -95,15 +90,21 @@ footer
 	.dont-push
 		width: 25%
 		text-align: center
+	.dont-push p
+		font-size: 16px
+		text-decoration: line-through
+		margin-top: -70px
+		margin-bottom: 20px
 	.dont-push .tdfw-btn
-		display: block
+		display: inline-block
 		margin-top: 1.1em
 		margin-left: 0.5em
 	.dont-push .tdfw-btn img
 		max-width: 3.33em
 	.info-card
-		width: 70%
+		max-width: 21.11em
 		padding-left: 1em
+		width: 70%
 	.info-card p
 		line-height: 1.5em
 	.info-card strong
@@ -121,6 +122,8 @@ footer
 	.sitemap-pages strong
 		font-family: 'avenirB', sans-serif
 		text-decoration: underline
+	.newsletter-card
+		margin-top: 4.4em
 	@media (max-width: $tablet_b)
 		.dont-push, .info-card
 			width: 100%
@@ -133,6 +136,9 @@ footer
 			width: 49%
 			display: inline-block
 			vertical-align: top
+		.dont-push > img,
+		.dont-push p
+			display: none
 	@media (max-width: $phone_b)
 		.sitemap-pages, .sitemap
 			width: 100%
@@ -240,6 +246,8 @@ footer
 			bottom: 0
 		.sitemap, .btn-follow
 			text-align: left
+
+
 // BIG NAVIGATION EXPANDED
 .expanded-nav.opened
 	margin-top: 0!important
@@ -258,12 +266,10 @@ body.noScroll
 //SECONDARY NAV
 .nd-nav
 	background: $c-white
-	position: fixed
-	z-index: 4
-	top: 67px
+	float: left
+	position: relative
 	width: 100%
-	.breadcrumbs
-		padding-bottom: 1.11em
+	padding-top: 1.1em
 
 
 // MANIFIESTO PARENT PAGE
@@ -296,32 +302,6 @@ body.noScroll
 	@media (max-width: $phone_b)
 		.main-quote .center h1
 			font-size: 2.66em
-
-
-// .manifiesto-slick-nd-nav
-// 	margin-bottom: 1em
-// 	ul
-// 		text-align: center
-// 	li
-// 		display: inline-block
-// 		position: relative
-// 	li a
-// 		font-family: 'timesR', Times New Roman
-// 		text-decoration: underline
-// 		color: $c-black
-// 		margin: 0 10px
-// 	li a:hover, li a:active
-// 		color: $c-blue
-// 	li a:after
-// 		content: '|'
-// 		color: $c-black
-// 		position: absolute
-// 		margin-left: 8px
-// 	li:last-child a:after
-// 		content: ''
-// 	li a.active
-// 		font-family: 'avenirB', sans-serif
-// 		color: $c-blue
 
 
 // MANIFIESTO SLIDER STYLES
@@ -403,25 +383,6 @@ body.noScroll
 	li:last-child a
 		padding-right: 0
 
-
-// ul.manifiesto-slide-dots
-// 	position: absolute
-// 	bottom: 110px
-// 	width: 100%
-// 	text-align: center
-// 	li
-// 		display: inline-block
-// 	li button
-// 		border: none
-// 		color: rgba(0,0,0,0)
-// 		display: inline-block
-// 		height: 3px
-// 		padding: 0
-// 		width: 1.667em
-// 		background-color: #EFEEED
-// 		margin-right: 10px
-// 	li.slick-active button
-// 		background-color: #9B9B9B
 
 .manifiesto-foot
 	margin-top: 8.33em
@@ -729,6 +690,9 @@ body.noScroll
 		margin-bottom: 1.66em
 	li
 		padding-right: 1.66em
+	@media (max-width: $phone_b)
+		li
+			padding-right: 0
 
 
 // HOME PAGE: LeftToRight BIG SCROLL
@@ -760,80 +724,28 @@ body.noScroll
 	.featured-content
 		display: inline-block
 		vertical-align: top
-	.main-content header
-		padding-left: 0
-		padding-right: 0
-	.main-content header,
 	.main-content .nd-nav
 		+wrap
-	.featured-content
-		+bg-img
-		position: relative
-		margin-left: -7px
-	.featured-content .description
-		max-width: 26.11em
-		left: 10%
-		+pt-100
-		position: absolute
-		top: 20%
-		white-space: normal
-		font-family: 'avenirB', sans-serif
-		z-index: 2
-	.featured-content .description h2
-		margin-bottom: 1.2em
-	.homepage-slider
-		width: 80%
-		margin: 0 auto
-		position: relative
-	.homepage-slider.blue-mask
-		&:after
-			content: ""
-			height: 100%
-			left: 0
-			top: 0
-			position: absolute
-			width: 22.2em
-			z-index: 1
-			+slider-blue-gradient
-	.homepage-slider.white-mask
-		&:before
-			content: ""
-			height: 100%
-			left: 0
-			top: 0
-			position: absolute
-			width: 22.2em
-			z-index: 1
-			+slider-white-gradient
-	.homepage-slider li
-		padding: 80px 0
-		height: 100vh
-	.homepage-slider li > div
-		+bg-img
-		width: 100%
-		height: 100%
-	.homepage-slider .slick-dots
-		position: absolute
-		bottom: 10em
-		left: 0
-		right: 0
-		margin: 0 auto
-		height: 0
-		text-align: center
-	.homepage-slider .slick-dots li
-		height: 20px
-		width: 20px
-		display: inline-block
-		margin-right: 10px
-		padding: 10px
-	.homepage-slider .slick-dots li.slick-active button
-		background: $c-blue
-	.homepage-slider .slick-dots li button
-		background: $c-black
-		color: rgba(0,0,0,0)
-		height: 20px
-		width: 20px
-		+border-radius(20px)
-	@media (max-width: $med_b)
+	@media (max-width: $large_b)
 		.message .txt
 			font-size: 10em
+	@media (max-width: $tablet_b)
+		position: relative
+		padding-left: 0
+		white-space: normal
+		body
+			height: auto!important
+		.main-content
+			+padding-wrap
+			display: block
+			float: left
+			margin-left: 0
+			margin-top: 2em!important
+			width: 100%!important
+		.message .small-txt
+			position: relative
+			bottom: 0
+			padding: 2em 0 3em 0
+		.message .txt
+			font-size: 5em
+			white-space: normal

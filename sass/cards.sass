@@ -183,6 +183,7 @@
 // single video card
 .single-video-card
 	display: inline-block
+	min-width: 14.11em
 	+one-fourth
 	.img
 		+bg-img
@@ -221,7 +222,17 @@
 		display: inline-block
 		margin: 0
 		color: $c-black
-
+	@media (max-width: $med_b)
+		min-width: auto
+	@media (max-width: $tablet_b)
+		width: 49%
+		float: inherit
+		vertical-align: top
+		padding-bottom: 1.1em
+	@media (max-width: $phone_b)
+		width: 100%
+		.img
+			height: 11em
 
 // post card + info window
 .post-card
@@ -375,64 +386,6 @@
 			color: $c-white
 			position: absolute
 			top: 0
-
-
-
-// newsletter card
-.newsletter-card
-	max-width: 22.22em
-	display: inline-block
-	.cta
-		float: left
-	input[type="text"]
-		+sharp-shadow
-		border: 1px solid $c-black
-		background: $c-white
-		color: $c-blue
-		display: inline-block
-		font-family: 'timesB', Times New Roman
-		margin-right: 1.11em
-		padding: 1.4em 1.2em
-		width: 100%
-		@include input-placeholder
-			color: $c-blue
-			opacity: 1
-	input[type="submit"]
-		+sharp-shadow
-		height: 44px
-		text-decoration: underline
-		background: $c-blue
-		color: $c-white
-		padding: 0.7em 1.7em
-		float: left
-		position: relative
-	// input[type="submit"]:active
-	// 	+sharp-shadow
-	// 	left: 2px
-	// 	top: 2px
-	// 	position: relative
-	// 	height: 40px
-	.button
-		height: 40px
-		margin-top: -1em
-		position: relative
-		display: inline-block
-	span
-		position: absolute
-		display: inline-block
-		left: 0
-		width: 100%
-		pointer-events: none
-		z-index: 3
-	span:after
-		content: ''
-		border: 1px solid $c-white
-		position: absolute
-		width: 94%
-		left: 4px
-		height: 36px
-		top: 4px
-
 
 
 
@@ -713,3 +666,89 @@
 
 #childElements li
 	padding: 0 50px
+
+
+// This is definitely the last round
+
+// TICKET CARD
+.ticket-card
+	position: relative
+	margin-left: 7.89em
+	.txt
+		display: inline-block
+		+sharp-shadow
+		border: 1px solid $c-black
+		background: $c-white
+		padding: 1.66em
+		max-width: 16.67em
+	.txt h4
+		color: $c-blue
+		margin-bottom: 1.2em
+	.txt p
+		color: $c-black
+		font-size: 1.22em
+		font-family: 'timesR', Times New Roman
+		margin-bottom: 1.2em
+	.txt strong,
+	.txt b
+		display: block
+		font-family: 'timesB', Times New Roman
+		margin-bottom: 0.7em
+	.cta
+		color: $c-white
+		display: inline-block
+		+border-radius(100%)
+		width: 8.89em
+		height: 8.89em
+		background: $c-black
+		text-align: center
+		text-decoration: underline
+		bottom: 1.6em
+		position: absolute
+		left: -7.89em
+	.cta:hover
+		background: $c-yellow
+	.cta p
+		position: relative
+		top: 40%
+	.cta p:after
+		content: "🎫"
+		top: 0.7em
+		text-align: center
+		font-size: 2em
+		text-decoration: none
+		position: absolute
+		left: 0
+		right: 0
+		margin: 0 auto
+
+
+
+// NEWSLETTER CARD
+.newsletter-card
+	max-width: 22.22em
+	display: inline-block
+	.cta
+		float: left
+	input[type="text"]
+		+sharp-shadow
+		border: 1px solid $c-black
+		background: $c-white
+		color: $c-blue
+		display: inline-block
+		font-family: 'timesB', Times New Roman
+		padding: 1.4em 1.2em
+		width: 100%
+		@include input-placeholder
+			color: $c-blue
+			opacity: 1
+	button.blue-cta
+		margin-top: -1.1em
+	.button
+		height: 40px
+		margin-top: -1em
+		position: relative
+		display: inline-block
+	@media (max-width: $tablet_b)
+		margin-top: 1.4em
+		margin-bottom: 1.4em

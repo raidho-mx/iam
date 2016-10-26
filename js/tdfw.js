@@ -3,20 +3,20 @@
     var vendors = ['ms', 'moz', 'webkit', 'o'];
     for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
         window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
                                    || window[vendors[x]+'CancelRequestAnimationFrame'];
     }
- 
+
     if (!window.requestAnimationFrame)
         window.requestAnimationFrame = function(callback, element) {
             var currTime = new Date().getTime();
             var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-            var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+            var id = window.setTimeout(function() { callback(currTime + timeToCall); },
               timeToCall);
             lastTime = currTime + timeToCall;
             return id;
         };
- 
+
     if (!window.cancelAnimationFrame)
         window.cancelAnimationFrame = function(id) {
             clearTimeout(id);
@@ -81,7 +81,7 @@
 		event.target.playVideo();
 		requestAnimationFrame(checkTime)
 	}
-	
+
 	function checkTime() {
 		if(turntDown) {
 			return false;
@@ -90,7 +90,7 @@
 		if(player.getCurrentTime() > turndownAt) {
 			turntDown = true;
 			removeCurStyles();
-			addCurStyles()	
+			addCurStyles()
 		}
 
 	}
@@ -106,7 +106,7 @@
 		}
 	}
 	//<iframe width="560" height="315" src="//www.youtube.com/embed/HMUDVMiITOU?autoplay=1" frameborder="0" allowfullscreen></iframe>
-	
+
 	function setupAnimations() {
 		var numKeyFrames = 10
 		var introKeyFrames = '';
@@ -157,7 +157,7 @@
 		style.textContent = allStyles
 		document.body.appendChild(style)
 	}
-	
+
 
 	function addCurStyles() {
 
@@ -174,7 +174,7 @@
 		//console.log(max)
 		for(var i = 0; i < max ; i++) {
 			var node = nodes[i];
-			
+
 			node.classList.add(curClass)
 			var delay = Math.round(Math.random() * 1000) / 1000 + 'ms'
 			if(firstAddition) {
@@ -184,7 +184,7 @@
 			if(typeof css === 'function') {
 				css = css()
 			}
-			node.style['webkitAnimation'] = css + ' ' + delay 
+			node.style['webkitAnimation'] = css + ' ' + delay
 			node.style['animation'] = css + ' ' + delay
 
 		}

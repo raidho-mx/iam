@@ -5,9 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/reset.css" media="screen" title="no title" charset="utf-8">
-	<link rel="stylesheet" href="css/jquery.jscrollpane.css" media="screen" title="no title" charset="utf-8">
-	<link rel="stylesheet" href="css/index.css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	<link rel="stylesheet" href="css/index.css" media="screen" title="no title" charset="utf-8">
 	<title>IAM | Bienvenido</title>
 </head>
 <body style="margin-top: 88px;">
@@ -30,12 +29,8 @@
 						<li><a href="#">News</a></li>
 					</ul>
 					<div class="newsletter-card">
-						<div class="bar bg-blue"></div>
 						<input type="text" placeholder="Subscribe to our weekly feed of randomness"/>
-						<div class="button">
-							<span></span>
-							<input type="submit" value="Submit"/>
-						</div>
+						<button class="blue-cta">Submit</button>
 					</div>
 				</div>
 				<div class="featured-content">
@@ -110,23 +105,19 @@
 			<a href="index.html" class="iam">IAM</a>
 		</div>
 		<div class="media">
-			<ul class="btn-follow">
-				<li><a href="#">Join our Newsletter 😀</a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-			</ul>
+			<a href="#">Join our Newsletter 😀</a>
 		</div>
 	</nav>
+	<div class="nd-nav">
+		<div class="breadcrumbs">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#three">Manifiesto</a></li>
+			</ul>
+		</div>
+	</div>
 </header>
 
-<div class="nd-nav">
-	<div class="breadcrumbs">
-		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#three">Manifiesto</a></li>
-		</ul>
-	</div>
-</div>
 
 <section id="mWrapper">
 	<div class="manifiesto-intro" id="manifiesto1" style="position:relative;">
@@ -231,7 +222,7 @@
 	<div class="wrap">
 		<div>
 			<div class="dont-push">
-				<img src="img/tdfw-txt.svg" alt="">
+				<img src="img/btn-arrow.svg" alt="">
 				<a class="tdfw-btn" id="bookmarklet" href='javascript:(function()%7Bjavascript:var%20s%3Ddocument.createElement(%27script%27)%3Bs.setAttribute(%27src%27,%27https://nthitz.github.io/turndownforwhatjs/tdfw.js%27)%3Bdocument.body.appendChild(s)%3B%7D)()%3B'>
 					<img src="img/tdfw-btn.png" alt="">
 				</a>
@@ -262,15 +253,9 @@
 				<li><a href="#">Buy Tickets</a></li>
 				<li><a href="#">News</a></li>
 			</ul>
-		</div>
-		<div>
 			<div class="newsletter-card">
-				<div class="bar bg-blue"></div>
 				<input type="text" placeholder="Subscribe to our weekly feed of randomness"/>
-				<div class="button">
-					<span></span>
-					<input type="submit" value="Submit"/>
-				</div>
+				<button class="blue-cta">Submit</button>
 			</div>
 		</div>
 	</div>
@@ -286,30 +271,6 @@
 <script>
 	$(document).ready(function() {
 		var controller = $.superscrollorama();
-		// individual element tween examples
-		//controller.addTween('#sliderM1', TweenMax.from( $('#sliderM1'), .5, {css:{ 'opacity' : '1', 'right' : '0' }}));
-		//controller.addTween('#manifiesto1', TweenMax.from( $('#manifiesto1'), .25, {css:{ 'color' : 'red' }, ease:Quad.easeInOut}));
-		//controller.addTween('#manifiesto1', TweenMax.from( $('#manifiesto1'), .25, {css:{ 'right' : '1000px' }, ease:Quad.easeInOut}));
-		// controller.addTween('#spin-it', TweenMax.from( $('#spin-it'), .25, {css:{opacity:0, rotation: 720}, ease:Quad.easeOut}));
-		// controller.addTween('#scale-it', TweenMax.fromTo( $('#scale-it'), .25, {css:{opacity:0, fontSize:'20px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, fontSize:'240px'}, ease:Quad.easeInOut}));
-		//controller.addTween('#sliderM1', TweenMax.fromTo( $('#sliderM1'), .2, {css:{ 'right' : '-800px' }, immediateRender:true, ease:Quad.easeInOut}, {css:{ 'right' : '0', 'opacity' : '1'}, ease:Quad.easeInOut}), 0, 100); // 100 px offset for better timing
-		//controller.addTween('#sliderM2', TweenMax.fromTo( $('#sliderM2'), .2, {css:{ 'right' : '-800px' }, immediateRender:true, ease:Quad.easeInOut}, {css:{ 'right' : '0', 'opacity' : '1'}, ease:Quad.easeInOut}), 0, 100); // 100 px offset for better timing
-		//controller.addTween('#sliderM3', TweenMax.fromTo( $('#sliderM3'), .2, {css:{ 'right' : '-800px' }, immediateRender:true, ease:Quad.easeInOut}, {css:{ 'right' : '0', 'opacity' : '1'}, ease:Quad.easeInOut}), 0, 100); // 100 px offset for better timing
-
-		// controller.pin($('#mSlider'), 1000, {
-		// 	anim: (new TimelineLite())
-		// 		.append(
-		// 			TweenMax.fromTo($('#sliderM1'), .2, {css:{ 'right' : '-800px', 'opacity' : '0' }, immediateRender:true})
-		// 			// TweenMax.fromTo( $('#sliderM2'), .2, {css:{ 'right' : '-800px' }, immediateRender:true}, {css:{ 'right' : '0', 'opacity' : '1'}}),
-		// 			// TweenMax.fromTo( $('#sliderM3'), .2, {css:{ 'right' : '-800px' }, immediateRender:true}, {css:{ 'right' : '0', 'opacity' : '1'}})
-		// 			//TweenMax.fromTo($('#parallax-it-left'), 1, {css:{top: 200}, immediateRender:true}, {css:{top: -600}}),
-		// 			//TweenMax.fromTo($('#parallax-it-right'), 1, {css:{top: 500}, immediateRender:true}, {css:{top: -1250}})
-		// 		)
-		// 		.append(
-		// 			TweenMax.to($('#sliderM1'), .2, {css:{ 'right' : '0', 'opacity' : '1' }, immediateRender:true})
-		// 		)
-		// })
-
 		controller.pin($('#sliderM1'), 6000, {
 			anim: (new TimelineLite())
 				.append(

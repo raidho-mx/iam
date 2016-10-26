@@ -17,6 +17,36 @@
 
 
 // cta's styles
+.blue-cta
+	color: $c-white
+	display: inline-block
+	position: relative
+	background-color: $c-blue
+	padding: 0.7em 1.7em
+	padding-top: 1em
+	font-size: 16px
+	text-decoration: underline
+	+sharp-shadow
+	&:after
+		content: ''
+		position: absolute
+		border: 1px solid $c-white
+		height: 80%
+		top: 5px
+		left: 4px
+		width: 93%
+	&:active
+		box-shadow: 1px 1px 0px 0px black
+		top: 4px
+		left: 4px
+
+.blue-link
+	color: $c-blue
+	display: block
+	font-size: 14px
+	font-family: 'timesR', Times New Roman
+	padding: 1em 0
+
 .btn-bold-under-bgblue
 	background-color: $c-blue
 	color: $c-white

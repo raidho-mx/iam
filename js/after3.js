@@ -15,7 +15,7 @@ $(document).ready( function() {
 	var breadcrumbsHeight = $(".nd-nav").outerHeight();
 	var totalHeaderHeight = headerHeight + breadcrumbsHeight;
 
-	$("body, .manifiesto-modal").css({"margin-top" : totalHeaderHeight });
+	$("body").css({"margin-top" : headerHeight });
 });
 
 
@@ -27,7 +27,7 @@ $(window).on('resize', function(){
 	var totalHeaderHeight = headerHeight + breadcrumbsHeight;
 	var bodyWidth = $('body').width();
 
-	$("body").css({"margin-top" : totalHeaderHeight });
+	$("body").css({"margin-top" : headerHeight });
 	$(".manifiesto-slider-wrapper").css({"top" : headerHeight});
 	$(".nd-nav").css({ 'top' : headerHeight });
 	$('.ltr-scroll-home .main-content').css({'margin-top' : totalHeaderHeight });
@@ -206,6 +206,7 @@ $(document).ready(function () {
 		$('.ltr-scroll-home .main-content').css({'margin-top' : totalHeaderHeight });
 		$('.ltr-scroll-home .featured-content, .ltr-scroll-home .main-content').css({ 'width' : bodyWidth });
 	}
+
 
 	$(window).scroll(function () {
 		var s = $(this).scrollTop(),
