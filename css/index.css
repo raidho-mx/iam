@@ -252,6 +252,7 @@ section {
   background-color: #0000FF;
   padding: 0.7em 1.7em;
   padding-top: 1em;
+  font-family: "avenirB", sans-serif;
   font-size: 16px;
   text-decoration: underline;
   box-shadow: 6px 6px 0px 0px black; }
@@ -1518,6 +1519,89 @@ section {
   @media (max-width: 800px) {
     .description-block {
       width: 100%; } }
+
+.halfs-shortcuts {
+  padding: 6.11em 0;
+  float: left;
+  width: 100%; }
+  @media (max-width: 800px) {
+    .halfs-shortcuts {
+      padding: 2.77em 0; } }
+  @media (max-width: 600px) {
+    .halfs-shortcuts {
+      padding: 1.67em 0; } }
+  .halfs-shortcuts > div, .halfs-shortcuts > li, .halfs-shortcuts > figure {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative; }
+    @media (max-width: 800px) {
+      .halfs-shortcuts > div, .halfs-shortcuts > li, .halfs-shortcuts > figure {
+        display: inline-block;
+        margin: 0;
+        width: 100%; } }
+  .halfs-shortcuts > div {
+    padding-right: 2em;
+    padding-bottom: 3.3em; }
+  .halfs-shortcuts h4 {
+    font-family: "avenirB", sans-serif;
+    margin-bottom: 1.22em; }
+  .halfs-shortcuts h3 {
+    color: #0000FF;
+    font-family: "avenirB", sans-serif;
+    font-size: 1.556em;
+    margin-bottom: 0.7em; }
+  .halfs-shortcuts p span {
+    font-family: "avenirR", sans-serif;
+    font-size: 14px; }
+  .halfs-shortcuts p {
+    font-family: "timesB", Times New Roman;
+    font-size: 1.22em;
+    margin-bottom: 1em; }
+  .halfs-shortcuts .img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding-bottom: 50%;
+    margin-bottom: 1.5em; }
+  .halfs-shortcuts .txt {
+    max-width: 14.44em; }
+  @media (max-width: 600px) {
+    .halfs-shortcuts > div {
+      padding-right: 0; } }
+
+.partners-block {
+  padding-bottom: 6.11em;
+  float: left;
+  width: 100%; }
+  @media (max-width: 800px) {
+    .partners-block {
+      padding-bottom: 2.77em; } }
+  @media (max-width: 600px) {
+    .partners-block {
+      padding-bottom: 1.67em; } }
+  .partners-block h3 {
+    color: #0000FF;
+    text-align: center;
+    margin-bottom: 3em; }
+  .partners-block ul {
+    max-width: 55em;
+    margin: 0 auto; }
+  .partners-block li {
+    width: 24%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle; }
+    @media (max-width: 800px) {
+      .partners-block li {
+        width: 49%; } }
+  .partners-block li a {
+    display: inline-block;
+    max-width: 8em;
+    padding-bottom: 3em; }
+  .partners-block li img {
+    width: 100%; }
 
 .wrapper {
   position: relative; }

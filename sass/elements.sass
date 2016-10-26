@@ -271,10 +271,73 @@
 		h1
 			font-size: 1.55em
 
+
+
 // BIG DESCRIPTION
 .description-block
 	+ptb-100
 	font-family: "avenirB", sans-serif
 	width: 80%
 	@media (max-width: $tablet_b)
+		width: 100%
+
+
+
+// BIG HALF SHORTCUTS
+.halfs-shortcuts
+	+ptb-100
+	+two_col
+	width: 100%
+	> div
+		padding-right: 2em
+		padding-bottom: 3.3em
+	h4
+		font-family: "avenirB", sans-serif
+		margin-bottom: 1.22em
+	h3
+		color: $c-blue
+		font-family: "avenirB", sans-serif
+		font-size: 1.556em
+		margin-bottom: 0.7em
+	p span
+		font-family: "avenirR", sans-serif
+		font-size: 14px
+	p
+		font-family: 'timesB', Times New Roman
+		font-size: 1.22em
+		margin-bottom: 1em
+	.img
+		+bg-img
+		width: 100%
+		padding-bottom: 50%
+		margin-bottom: 1.5em
+	.txt
+		max-width: 14.44em
+	@media (max-width: $phone_b)
+		> div
+			padding-right: 0
+
+
+
+// PARTNERS BLOCK
+.partners-block
+	+pb-100
+	float: left
+	width: 100%
+	h3
+		color: $c-blue
+		text-align: center
+		margin-bottom: 3em
+	ul
+		max-width: 55em
+		margin: 0 auto
+	li
+		+one-fourth-px-issue
+		text-align: center
+		vertical-align: middle
+	li a
+		display: inline-block
+		max-width: 8em
+		padding-bottom: 3em
+	li img
 		width: 100%
