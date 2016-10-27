@@ -106,6 +106,36 @@ $(document).ready(function() {
 
 
 
+// GALLERY SLIDER
+$(document).ready(function() {
+	$('.gallery-slider').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 2,
+		dots: false,
+		arrows: true,
+		variableWidth: true,
+		centerMode: true,
+		responsive: [
+		{
+		breakpoint: 800,
+		settings: {
+				variableWidth: false,
+				slidesToShow: 2
+			}
+		},
+		{
+		breakpoint: 600,
+		settings: {
+				variableWidth: false,
+				slidesToShow: 1
+			}
+		}]
+	});
+});
+
+
+
 // VIDEOS PAGE: More Videos Carousell
 $(document).ready(function() {
 	$('.more-videos').slick({
@@ -128,8 +158,8 @@ $(document).ready(function() {
 			}
 		},
 		{
-			breakpoint: 600,
-			settings: {
+		breakpoint: 600,
+		settings: {
 				slidesToShow: 1,
 				slidesToScroll: 1
 			}

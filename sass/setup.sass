@@ -113,6 +113,8 @@ h2
 
 h3
 	font-size: 2em
+	@media (max-width: $tablet_b)
+		font-size: 1.55em
 h4
 	font-size: 1.55em
 
@@ -145,18 +147,35 @@ h4
 		content: '—'
 		padding-right: 0.5em
 
-
-// COMBOS
 .font-icon
 	font-family: 'FontAwesome'
 
-.blue-mask
-	background: rgba(0,0,255,0.5)
+
+// COMBOS
+.video-wrap
+	position: relative
+	padding-bottom: 56.25%
+	padding-top: 25px
+	height: 0
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+.white-mask, .blue-mask, .gray-mask
 	left: 0
 	height: 100%
 	position: absolute
 	top: 0
 	width: 100%
+.white-mask
+	background: rgba(255,255,255,0.8)
+.blue-mask
+	background: rgba(0,0,255,0.5)
+.gray-mask
+	background: rgba(245,245,245,0.5)
 
 .custom-mask
 	left: 0

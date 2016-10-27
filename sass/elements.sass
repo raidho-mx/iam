@@ -92,6 +92,8 @@
 	+bg-img
 	height: 90vh
 	position: relative
+	float: left
+	width: 100%
 	.description
 		max-width: 26.11em
 		left: 10%
@@ -248,6 +250,39 @@
 
 
 
+// GALLERY SLIDER BLOCK
+.gallery-block
+	+ptb-100
+	background: $c-gray-light
+	float: left
+	width: 100%
+	a
+		color: $c-blue
+		font-size: 14px
+	a.blue-link
+		text-decoration: underline
+	b, strong
+		font-family: "avenirB", sans-serif
+	p
+		font-size: 14px
+		padding-top: 1.3em
+	.gallery-slider
+		height: auto
+		float: left
+		position: relative
+		width: 100%
+		margin-bottom: 3.3em
+	.gallery-slider li
+		padding-right: 20px
+		height: 100%
+	.gallery-slider img
+		max-height: 30em
+	@media (max-width: $tablet_b)
+		.gallery-slider img
+			max-height: inherit
+			width: 100%
+
+
 
 // HERO BLOCK
 .hero-block
@@ -273,19 +308,79 @@
 
 
 
+// HERO BLOCK W/CTA
+.hero-cta-block
+	+bg-img
+	float: left
+	height: auto
+	position: relative
+	width: 100%
+	margin-bottom: 2em
+	a
+		color: $c-black
+	b, strong
+		font-family: "avenirB", sans-serif
+	figure
+		margin: 0 auto
+		max-width: 30.5em
+	figure img
+		width: 100%
+	figcaption p
+		margin-bottom: 1.1em
+	h1
+		color: $c-blue
+		text-decoration: underline
+		font-family: "avenirB", sans-serif
+		margin-bottom: 0.7em
+	h4
+		font-family: "avenirB", sans-serif
+		margin-bottom: 1em
+	.title
+		bottom: -4em
+		max-width: 33.3em
+		margin: 0 auto
+		text-align: center
+		position: relative
+		padding-top: 6em
+	@media (max-width: $tablet_b)
+		margin-bottom: 3em
+		.title
+			bottom: -2em
+			padding-top: 2em
+
 // BIG DESCRIPTION
 .description-block
 	+ptb-100
-	font-family: "avenirB", sans-serif
+	float: left
 	width: 80%
+	b, strong
+		font-family: "avenirB", sans-serif
 	@media (max-width: $tablet_b)
 		width: 100%
+
+
+// SMALL DESCRIPTION FOR BLOCKS
+.small-description
+	+padding-wrap
+	float: left
+	margin-bottom: 1.1em
+	width: 100%
+	b, strong
+		font-family: "avenirB", sans-serif
+	h3
+		font-family: "avenirB", sans-serif
+		font-size: 2.3em
+		color: $c-blue
+	p
+		font-size: 14px
+		padding-top: 1.3em
+		max-width: 35em
 
 
 
 // BIG HALF SHORTCUTS
 .halfs-shortcuts
-	+ptb-100
+	+pt-100
 	+two_col
 	width: 100%
 	> div
@@ -319,9 +414,9 @@
 
 
 
-// PARTNERS BLOCK
+// PARTNERS BLOCK (THE LOGOS BLOCK)
 .partners-block
-	+pb-100
+	+ptb-100
 	float: left
 	width: 100%
 	h3
@@ -341,3 +436,23 @@
 		padding-bottom: 3em
 	li img
 		width: 100%
+
+
+
+// MORE EPISODES
+.more-episodes-block
+	+ptb-100
+	float: left
+	width: 100%
+
+.more-episodes
+	padding: 3.3em 0
+	float: left
+	> p
+		font-family: 'avenirB', sans-serif
+		margin-bottom: 1.66em
+	li
+		padding-right: 1.66em
+	@media (max-width: $phone_b)
+		li
+			padding-right: 0

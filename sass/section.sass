@@ -96,7 +96,7 @@ footer
 		margin-top: -70px
 		margin-bottom: 20px
 	.dont-push .tdfw-btn
-		display: inline-block
+		display: block
 		margin-top: 1.1em
 		margin-left: 0.5em
 	.dont-push .tdfw-btn img
@@ -682,17 +682,6 @@ body.noScroll
 		.halfs > div
 			display: inline-block
 
-.more-episodes
-	padding: 3.3em 0
-	float: left
-	> p
-		font-family: 'avenirB', sans-serif
-		margin-bottom: 1.66em
-	li
-		padding-right: 1.66em
-	@media (max-width: $phone_b)
-		li
-			padding-right: 0
 
 
 // HOME PAGE: LeftToRight BIG SCROLL
@@ -724,6 +713,8 @@ body.noScroll
 	.featured-content
 		display: inline-block
 		vertical-align: top
+	.featured-content
+		float: inherit
 	.main-content .nd-nav
 		+wrap
 	@media (max-width: $large_b)
