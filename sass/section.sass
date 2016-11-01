@@ -740,3 +740,39 @@ body.noScroll
 		.message .txt
 			font-size: 5em
 			white-space: normal
+
+
+// NEWSLETTER PAGE
+.newsletter-intro
+	border-bottom: 1px solid $c-gray-light
+	.halfs
+		+two_col
+		+ptb-100
+		float: initial
+		position: relative
+	.halfs h4
+		color: $c-blue
+		font-family: 'avenirB', sans-serif
+		margin-bottom: 0.7em
+	.halfs > div:nth-child(1)
+		padding-right: 7em
+	@media (max-width: $tablet_b)
+		.halfs > div:nth-child(1)
+			padding-right: 0
+
+.newsletter-log
+	+ptb-100
+	h3
+		padding-bottom: 2em
+		font-family: 'avenirB', sans-serif
+	ul
+		margin-bottom: 6em
+	li.single-video-card
+		display: none
+		padding-right: 1.67em
+		padding-bottom: 1.67em
+	li.single-video-card .txt strong
+		margin-bottom: 0
+	@media (max-width: $tablet_b)
+		ul
+			margin-bottom: 3em

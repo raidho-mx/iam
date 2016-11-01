@@ -184,7 +184,8 @@
 .single-video-card
 	display: inline-block
 	min-width: 14.11em
-	+one-fourth
+	vertical-align: top
+	+one-fourth-px-issue
 	.img
 		+bg-img
 		height: 8.33em
@@ -211,10 +212,13 @@
 		font-size: 0.778em
 		line-height: 1.5em
 		color: $c-black
-	.txt strong
+	.txt strong,
+	.txt b
 		font-family: "avenirB", sans-serif
 		margin: 1.2em 0
 		display: block
+	.txt strong > span
+		color: $c-blue
 	.txt h5
 		margin: 1.2em 0
 	.txt h5 strong
@@ -726,10 +730,11 @@
 // NEWSLETTER CARD
 .newsletter-card
 	max-width: 22.22em
-	display: inline-block
+	position: relative
 	.cta
 		float: left
-	input[type="text"]
+	input[type="text"],
+	input[type="email"]
 		+sharp-shadow
 		border: 1px solid $c-black
 		background: $c-white
@@ -740,7 +745,6 @@
 		width: 100%
 		@include input-placeholder
 			color: $c-blue
-			opacity: 1
 	button.blue-cta
 		margin-top: -1.1em
 	.button
@@ -748,6 +752,30 @@
 		margin-top: -1em
 		position: relative
 		display: inline-block
+	.rtl-wrap
+		pointer-events: none
+		position: absolute
+		overflow: hidden
+		height: 100%
+		width: 100%
+	.rtl-loop
+		white-space: nowrap
+		overflow: hidden
+		background: red
+	.rtl-txt
+		font-family: "timesB", Times New Roman
+		color: $c-blue
+		display: inline
+		width: auto
+		position: absolute
+		z-index: 6
+		white-space: nowrap
+		top: 1.3em
+		&:after
+			content: 'E-mail goes Adress here, subscribe to our weekly feed of randomness'
+			position: relative
+			right: 0
+			margin-left: 140px
 	@media (max-width: $tablet_b)
 		margin-top: 1.4em
 		margin-bottom: 1.4em
