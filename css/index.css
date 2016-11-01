@@ -1681,6 +1681,12 @@ section {
     font-family: "avenirB", sans-serif; }
   .hero-half-block h1 .iam {
     display: block; }
+  @media (max-width: 1440px) {
+    .hero-half-block h1 {
+      font-size: 8em; }
+    .hero-half-block .title {
+      right: 10%;
+      bottom: -5em; } }
   @media (max-width: 800px) {
     .hero-half-block {
       margin-bottom: 0; }
